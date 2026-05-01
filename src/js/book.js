@@ -42,11 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       
       const encodedMessage = encodeURIComponent(message);
-      const waUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
+      const mailUrl = `mailto:hello@gameveda.in?subject=New Booking Request&body=${encodedMessage}`;
 
       // Update fallback link and show success
-      if (waLinkFallback) {
-        waLinkFallback.href = waUrl;
+      const mailLinkFallback = document.getElementById('mailLinkFallback');
+      if (mailLinkFallback) {
+        mailLinkFallback.href = mailUrl;
       }
       
       bookingForm.classList.add('hidden');
@@ -54,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
         successMessage.classList.remove('hidden');
       }
 
-      // Open WhatsApp in a new tab
-      window.open(waUrl, '_blank');
+      // Open Mail client
+      window.location.href = mailUrl;
     });
   }
 
