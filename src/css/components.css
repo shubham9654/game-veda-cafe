@@ -10,8 +10,8 @@
 .image-vr { background: linear-gradient(145deg, #111827, #1e1b4b 50%, #0f172a); }
 .image-pool { background: linear-gradient(145deg, #1f2937, #14532d 55%, #0f172a); }
 .image-cafe { background: linear-gradient(145deg, #3f1d14, #0f172a 55%, #312e81); }
-.zone-badge { position: absolute; top: .8rem; right: .8rem; width: 32px; height: 32px; border-radius: 50%; background: rgba(34,211,238,.15); color: #22d3ee; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); border: 1px solid rgba(34,211,238,.25); }
-.zone-badge svg { width: 16px; height: 16px; }
+.zone-badge { position: absolute; top: 1.2rem; right: 1.2rem; width: 32px; height: 32px; border-radius: 50%; background: rgba(34,211,238,.15); color: #22d3ee; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); border: 1px solid rgba(34,211,238,.25); z-index: 2; }
+.zone-badge i, .zone-badge svg { width: 16px; height: 16px; }
 .zone-badge.purple { background: rgba(168,85,247,.15); color: #a855f7; border-color: rgba(168,85,247,.25); }
 .zone-badge.green { background: rgba(34,197,94,.15); color: #22c55e; border-color: rgba(34,197,94,.25); }
 .zone-badge.orange { background: rgba(251,146,60,.15); color: #fb923c; border-color: rgba(251,146,60,.25); }
@@ -198,8 +198,8 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
   .zone-image { height: 7rem; }
   .zone-card h3 { font-size: .78rem; }
   .zone-card p { font-size: .68rem; }
-  .zone-badge { width: 28px; height: 28px; }
-  .zone-badge svg { width: 13px; height: 13px; }
+  .zone-badge { width: 28px; height: 28px; top: 1rem; right: 1rem; }
+  .zone-badge i, .zone-badge svg { width: 13px; height: 13px; }
 
   /* Pricing */
   .pricing-grid { gap: .6rem; }
