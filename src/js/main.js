@@ -1,6 +1,17 @@
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const yearEl = document.getElementById("year");
+const themeToggle = document.getElementById("themeToggle");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("light-mode") ? "light" : "dark"
+    );
+  });
+}
 
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();

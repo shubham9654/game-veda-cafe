@@ -232,6 +232,26 @@
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* === LIGHT MODE OVERRIDES === */
+.light-mode .zone-card { background: #ffffff; border-color: rgba(0,0,0,.1); box-shadow: 0 10px 20px rgba(0,0,0,.03); }
+.light-mode .zone-card h3 { color: #0f172a; }
+.light-mode .zone-card p { color: #475569; }
+.light-mode .price-card { background: #ffffff; border-color: rgba(0,0,0,.1); box-shadow: 0 10px 20px rgba(0,0,0,.03); }
+.light-mode .price-amt { color: #0f172a; }
+.light-mode .price-dur { color: #64748b; }
+.light-mode .member-card { background: #ffffff; border-color: rgba(0,0,0,.1); box-shadow: 0 10px 20px rgba(0,0,0,.03); }
+.light-mode .member-price { color: #0f172a; }
+.light-mode .member-features li { color: #475569; }
+.light-mode .panel, .light-mode .testimonial { background: #ffffff; border-color: rgba(0,0,0,.1); box-shadow: 0 10px 20px rgba(0,0,0,.03); }
+.light-mode .testimonial p { color: #475569; }
+.light-mode .footer-label { color: #475569; }
+.light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #475569; }
+.light-mode .social-btn { color: #475569; border-color: rgba(0,0,0,.15); }
+.light-mode .map-box { background: #f1f5f9; border-color: rgba(0,0,0,.1); }
+.light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(0,0,0,.1); }
+.light-mode .btn-price, .light-mode .btn-member { color: #0f172a; }
+.light-mode .zone-card:hover, .light-mode .price-card:hover, .light-mode .member-card:hover { border-color: rgba(0,0,0,.2); }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
