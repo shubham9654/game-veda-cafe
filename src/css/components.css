@@ -81,12 +81,12 @@
 .vibe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
 @media (min-width: 768px) { .vibe-grid { grid-template-columns: repeat(6, 1fr); } }
 .vibe-item { height: 7rem; border: 1px solid rgba(148,163,184,.2); border-radius: .7rem; overflow: hidden; }
-.v1 { background: linear-gradient(135deg, #1e293b, #0c4a6e); }
-.v2 { background: linear-gradient(135deg, #1e1b4b, #0f172a); }
-.v3 { background: linear-gradient(135deg, #0f172a, #1e1b4b 50%, #312e81); }
-.v4 { background: linear-gradient(135deg, #14532d, #0f172a); }
-.v5 { background: linear-gradient(135deg, #3f1d14, #0f172a); }
-.v6 { background: linear-gradient(135deg, #1e293b, #111827); }
+.v1 { background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop') center/cover no-repeat; }
+.v2 { background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=300&fit=crop') center/cover no-repeat; }
+.v3 { background: linear-gradient(135deg, rgba(15,23,42,.7), rgba(49,46,129,.7)), url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=300&fit=crop') center/cover no-repeat; }
+.v4 { background: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=300&fit=crop') center/cover no-repeat; }
+.v5 { background: linear-gradient(135deg, rgba(63,29,20,.7), rgba(15,23,42,.7)), url('https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=400&h=300&fit=crop') center/cover no-repeat; }
+.v6 { background: url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&h=300&fit=crop') center/cover no-repeat; }
 .vibe-label, .vibe-label2 { display: flex; align-items: center; justify-content: center; }
 .vibe-brand { font-size: 1rem; font-weight: 900; text-align: center; line-height: 1; text-shadow: 0 0 10px rgba(168,85,247,.4); }
 .vibe-mood { font-size: .7rem; font-weight: 800; text-align: center; line-height: 1.2; color: #fbbf24; text-shadow: 0 0 8px rgba(251,191,36,.3); }
@@ -107,9 +107,9 @@
 .testimonial p { color: #94a3b8; font-size: .78rem; font-style: italic; line-height: 1.5; }
 .reviewer-top { display: flex; align-items: center; gap: .5rem; margin-bottom: .5rem; }
 .reviewer-top strong { font-size: .8rem; display: block; margin-bottom: .15rem; }
-.avatar-big { width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background: linear-gradient(135deg, #22d3ee, #a855f7); }
-.purple-av { background: linear-gradient(135deg, #a855f7, #ec4899); }
-.green-av { background: linear-gradient(135deg, #22c55e, #06b6d4); }
+.avatar-big { width: 36px; height: 36px; min-width: 36px; border-radius: 50%; background: url('https://ui-avatars.com/api/?name=Rohan+Mehta&background=a855f7&color=fff&size=100') center/cover; }
+.purple-av { background: url('https://ui-avatars.com/api/?name=Ankit+Sharma&background=22c55e&color=fff&size=100') center/cover; }
+.green-av { background: url('https://ui-avatars.com/api/?name=Karan+Singh&background=fbbf24&color=fff&size=100') center/cover; }
 
 /* === BOOKING FORM === */
 .booking-subtext { text-align: center; font-size: .85rem; color: #94a3b8; max-width: 32rem; margin: 0 auto 2rem; line-height: 1.6; }
