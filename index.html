@@ -7,164 +7,496 @@
   <title>Game Veda | Ultimate Gaming Cafe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            neon: {
-              blue: "#22d3ee",
-              purple: "#a855f7",
-              pink: "#ec4899"
-            }
-          },
-          boxShadow: {
-            glow: "0 0 0 1px rgba(34,211,238,.2), 0 8px 30px rgba(59,130,246,.2)"
-          }
-        }
-      }
-    };
-  </script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <link rel="stylesheet" href="./src/css/styles.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
-  <div class="fixed inset-0 -z-10 hero-grid"></div>
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/75 border-b border-white/10">
-    <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-      <a href="#home" class="text-2xl font-extrabold tracking-tight">
-        GAME <span class="text-neon-purple">VEDA</span>
+<body>
+
+  <!-- Background grid -->
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i data-lucide="triangle" class="logo-tri"></i></span>
+        <span class="logo-text">GAME<br><span class="logo-veda">VEDA</span></span>
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
       </a>
-      <ul class="hidden md:flex items-center gap-7 text-sm text-slate-300">
-        <li><a class="hover:text-white transition-colors" href="#zones">Zones</a></li>
-        <li><a class="hover:text-white transition-colors" href="#pricing">Pricing</a></li>
-        <li><a class="hover:text-white transition-colors" href="#membership">Membership</a></li>
-        <li><a class="hover:text-white transition-colors" href="#contact">Contact</a></li>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#zones" class="nav-link">Zones</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#membership" class="nav-link">Membership</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-white/20" aria-label="Open menu">☰</button>
+
+      <a href="#contact" class="btn-primary nav-cta">Book Now</a>
+      <button id="menuBtn" class="hamburger" aria-label="Open menu">
+        <i data-lucide="menu"></i>
+      </button>
     </nav>
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 px-6 pb-4">
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="#home">Home</a>
+      <a class="mobile-link" href="#about">About Us</a>
       <a class="mobile-link" href="#zones">Zones</a>
       <a class="mobile-link" href="#pricing">Pricing</a>
       <a class="mobile-link" href="#membership">Membership</a>
+      <a class="mobile-link" href="#gallery">Gallery</a>
       <a class="mobile-link" href="#contact">Contact</a>
     </div>
   </header>
 
-  <main id="home">
-    <section class="mx-auto max-w-7xl px-6 pt-20 pb-16 lg:pt-28">
-      <div class="grid lg:grid-cols-2 gap-10 items-center">
-        <div class="space-y-6 reveal">
-          <p class="inline-flex items-center gap-2 rounded-full border border-neon-blue/40 px-3 py-1 text-xs text-neon-blue">
-            <span class="h-2 w-2 rounded-full bg-neon-blue animate-pulse"></span>
-            Next-Gen Gaming Hub
-          </p>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-            India’s Ultimate
-            <span class="bg-gradient-to-r from-neon-purple to-neon-blue bg-clip-text text-transparent">Gaming Cafe</span>
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-grid-layout">
+        <!-- Left column -->
+        <div class="hero-content">
+          <span class="pill"><i data-lucide="star" class="pill-icon"></i> Welcome to Game Veda</span>
+          <h1 class="hero-title">
+            INDIA'S ULTIMATE<br>
+            <span class="gradient-text">GAMING CAFÉ</span>
           </h1>
-          <p class="text-slate-300 max-w-xl">Play on high-end setups, dive into immersive VR, challenge friends on pool tables, and chill with great food and drinks.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#pricing" class="btn-primary">Book Your Slot</a>
-            <a href="#zones" class="btn-outline">Explore Zones</a>
+          <p class="hero-sub">
+            Next-Gen Gaming &nbsp;•&nbsp; Immersive VR<br>
+            Pool Tables &nbsp;•&nbsp; Café &amp; More
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary"><i data-lucide="gamepad-2"></i> Book Your Slot</a>
+            <a href="#pricing" class="btn-outline">View Pricing</a>
+          </div>
+          <p class="hero-location"><i data-lucide="map-pin"></i>&nbsp; Palam, New Delhi</p>
+        </div>
+
+        <!-- Right column -->
+        <div class="hero-visual tilt-card" id="tiltCard">
+          <div class="hero-image">
+            <div class="hero-neon-text">GAME<br>VEDA</div>
+            <div class="hero-particles">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="stat-avatars">
+              <span class="avatar"></span><span class="avatar"></span><span class="avatar"></span>
+            </div>
+            <div>
+              <strong>1000+</strong> Happy Gamers<br>
+              <span class="stat-sub">and Counting!</span>
+            </div>
           </div>
         </div>
-        <div class="reveal delay-1">
-          <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 to-slate-950 p-6 shadow-glow tilt-card">
-            <div class="h-72 rounded-2xl bg-[radial-gradient(circle_at_top_right,#7c3aed22,#0000_55%),radial-gradient(circle_at_20%_80%,#06b6d433,#0000_45%),linear-gradient(135deg,#0f172a,#020617)] flex items-center justify-center">
-              <p class="text-center text-lg font-semibold text-slate-100 px-8">Premium setup, smooth gameplay, vibrant vibe.</p>
-            </div>
-            <div class="mt-5 grid grid-cols-3 gap-3 text-center text-xs">
-              <div class="card-mini">PS5</div>
-              <div class="card-mini">VR</div>
-              <div class="card-mini">Pool</div>
-            </div>
+      </div>
+
+      <!-- Feature chips -->
+      <div class="features-row">
+        <div class="feature-chip reveal">
+          <span class="fchip-icon purple !flex"><i data-lucide="monitor"></i></span>
+          <div>
+            <strong>Premium Setup</strong>
+            <span>High-end consoles &amp; immersive VR</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="zones" class="mx-auto max-w-7xl px-6 py-16">
-      <div class="mb-8 reveal">
-        <h2 class="section-title">Our Zones</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        <article class="zone-card reveal"><h3>PlayStation Zone</h3><p>High refresh displays and low-latency controls for competitive fun.</p></article>
-        <article class="zone-card reveal delay-1"><h3>VR Zone</h3><p>Step into immersive worlds with responsive tracking and crisp visuals.</p></article>
-        <article class="zone-card reveal delay-2"><h3>Pool Zone</h3><p>Challenge your crew on premium pool tables in a lively atmosphere.</p></article>
-        <article class="zone-card reveal delay-3"><h3>Cafe & Food</h3><p>Quick bites and refreshing drinks to keep your energy up.</p></article>
-      </div>
-    </section>
-
-    <section id="pricing" class="mx-auto max-w-7xl px-6 py-16">
-      <div class="mb-8 reveal">
-        <h2 class="section-title">Pricing & Combos</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-5">
-        <article class="price-card reveal">
-          <h3>PlayStation</h3>
-          <p class="price">₹160 <span>/ 1 Hr</span></p>
-          <p>2 Hr pack: ₹280</p>
-          <p>4 Hr pack: ₹500</p>
-        </article>
-        <article class="price-card featured reveal delay-1">
-          <h3>VR Experience</h3>
-          <p class="price">₹350 <span>/ 30 Min</span></p>
-          <p>1 Hr: ₹600</p>
-          <p>Most popular for groups.</p>
-        </article>
-        <article class="price-card reveal delay-2">
-          <h3>Combo Deals</h3>
-          <p class="price">₹249 <span>Game + Drink</span></p>
-          <p>₹299 <span>Game + Food</span></p>
-          <p>Perfect for long sessions.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="membership" class="mx-auto max-w-7xl px-6 py-16">
-      <div class="mb-8 reveal">
-        <h2 class="section-title">Membership Plans</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-5">
-        <article class="member-card reveal">
-          <h3>Basic</h3>
-          <p class="plan-price">₹999</p>
-          <p>10 hours playtime. 30 days validity.</p>
-        </article>
-        <article class="member-card highlight reveal delay-1">
-          <h3>Pro</h3>
-          <p class="plan-price">₹1999</p>
-          <p>25 hours playtime. Priority booking and food discount.</p>
-        </article>
-        <article class="member-card reveal delay-2">
-          <h3>Elite</h3>
-          <p class="plan-price">₹3999</p>
-          <p>60 hours playtime with premium perks and exclusive offers.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact" class="mt-12 border-t border-white/10">
-    <div class="mx-auto max-w-7xl px-6 py-10 grid md:grid-cols-2 gap-7">
-      <div class="reveal">
-        <h3 class="text-xl font-bold mb-2">Visit Game Veda</h3>
-        <p class="text-slate-300">Dwarka, New Delhi, India</p>
-        <p class="text-slate-300">Mon - Sun: 11:00 AM to 11:00 PM</p>
-      </div>
-      <div class="reveal delay-1">
-        <h3 class="text-xl font-bold mb-2">Ready to play?</h3>
-        <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href="#">Book Your Slot</a>
-          <a class="btn-outline" href="#">WhatsApp Us</a>
+        <div class="feature-chip reveal delay-1">
+          <span class="fchip-icon blue !flex"><i data-lucide="users"></i></span>
+          <div>
+            <strong>Multiplayer Friendly</strong>
+            <span>Perfect for friends, groups &amp; tournaments</span>
+          </div>
+        </div>
+        <div class="feature-chip reveal delay-2">
+          <span class="fchip-icon pink !flex"><i data-lucide="coffee"></i></span>
+          <div>
+            <strong>Café &amp; Food</strong>
+            <span>Delicious food &amp; drinks to power your game</span>
+          </div>
+        </div>
+        <div class="feature-chip reveal delay-3">
+          <span class="fchip-icon gold !flex"><i data-lucide="tag"></i></span>
+          <div>
+            <strong>Affordable Pricing</strong>
+            <span>Great prices for non-stop fun</span>
+          </div>
         </div>
       </div>
     </div>
-    <p class="text-center text-xs text-slate-500 pb-6">© <span id="year"></span> Game Veda. All rights reserved.</p>
+  </section>
+
+  <!-- ==================== OUR ZONES ==================== -->
+  <section id="zones" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> OUR ZONES <span class="dash"></span></h2>
+      <div class="zones-grid">
+        <article class="zone-card reveal">
+          <div class="zone-image image-ps"></div>
+          <div class="zone-badge flex"><i data-lucide="gamepad-2"></i></div>
+          <h3>PLAYSTATION ZONE</h3>
+          <p>Experience next-gen gaming on PS5 with 55" UHD screens &amp; recliner seating.</p>
+        </article>
+        <article class="zone-card reveal delay-1">
+          <div class="zone-image image-vr"></div>
+          <div class="zone-badge purple"><i data-lucide="glasses"></i></div>
+          <h3>VR ZONE</h3>
+          <p>Step into another world with our high-end VR setups &amp; immersive games.</p>
+        </article>
+        <article class="zone-card reveal delay-2">
+          <div class="zone-image image-pool"></div>
+          <div class="zone-badge green"><i data-lucide="circle-dot"></i></div>
+          <h3>POOL ZONE</h3>
+          <p>Challenge your friends on our premium pool tables in a chill vibe.</p>
+        </article>
+        <article class="zone-card reveal delay-3">
+          <div class="zone-image image-cafe"></div>
+          <div class="zone-badge orange"><i data-lucide="utensils"></i></div>
+          <h3>CAFÉ &amp; FOOD</h3>
+          <p>From snacks to meals, we have everything to keep you energised.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING & COMBOS ==================== -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> PRICING &amp; COMBOS <span class="dash"></span></h2>
+      <div class="pricing-grid">
+
+        <!-- PlayStation -->
+        <article class="price-card reveal">
+          <div class="price-head">
+            <span class="price-icon blue"><i data-lucide="gamepad-2"></i></span>
+            <h3>PLAYSTATION</h3>
+          </div>
+          <div class="price-rows">
+            <div class="price-row">
+              <span class="price-amt">₹160</span>
+              <span class="price-dur">/ 1 Hr</span>
+              <span class="price-tag">Basic</span>
+            </div>
+            <div class="price-row highlight-row">
+              <span class="price-amt">₹280</span>
+              <span class="price-dur">/ 2 Hrs</span>
+              <span class="badge-popular">MOST POPULAR</span>
+            </div>
+            <div class="price-row highlight-row gold-row">
+              <span class="price-amt">₹500</span>
+              <span class="price-dur">/ 4 Hrs</span>
+              <span class="badge-best">BEST VALUE</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn-price blue-btn">PLAY NOW</a>
+        </article>
+
+        <!-- VR Experience -->
+        <article class="price-card featured reveal delay-1">
+          <div class="price-head">
+            <span class="price-icon purple"><i data-lucide="glasses"></i></span>
+            <h3>VR EXPERIENCE</h3>
+            <span class="badge-popular ml-auto">MOST POPULAR</span>
+          </div>
+          <div class="price-rows">
+            <div class="price-row">
+              <span class="price-amt">₹350</span>
+              <span class="price-dur">/ 30 Min</span>
+            </div>
+            <div class="price-row">
+              <span class="price-amt">₹600</span>
+              <span class="price-dur">/ 1 Hr</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn-price purple-btn">EXPERIENCE NOW</a>
+        </article>
+
+        <!-- Combo Deals -->
+        <article class="price-card reveal delay-2">
+          <div class="price-head">
+            <span class="price-icon gold"><i data-lucide="package"></i></span>
+            <h3>COMBO DEALS</h3>
+          </div>
+          <div class="price-rows">
+            <div class="price-row">
+              <span class="price-amt">₹249</span>
+              <span class="price-dur">Game + Drink</span>
+            </div>
+            <div class="price-row highlight-row gold-row">
+              <span class="price-amt">₹299</span>
+              <span class="price-dur">Game + Food</span>
+              <span class="badge-best">BEST VALUE</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn-price gold-btn">ORDER NOW</a>
+        </article>
+      </div>
+      <p class="price-note"><i data-lucide="info"></i>&nbsp; All prices are inclusive of taxes.</p>
+    </div>
+  </section>
+
+  <!-- ==================== MEMBERSHIP PLANS ==================== -->
+  <section id="membership" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> MEMBERSHIP PLANS <span class="dash"></span></h2>
+      <div class="membership-grid">
+
+        <article class="member-card reveal">
+          <div class="member-head">
+            <span class="member-icon blue"><i data-lucide="shield"></i></span>
+            <div>
+              <h3>BASIC</h3>
+              <span class="member-price">₹999</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 10 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 30 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Exciting Discounts</li>
+          </ul>
+          <a href="#contact" class="btn-member">GET BASIC</a>
+        </article>
+
+        <article class="member-card popular reveal delay-1">
+          <div class="member-head">
+            <span class="member-icon purple"><i data-lucide="shield-check"></i></span>
+            <div>
+              <h3>PRO <span class="badge-popular">MOST POPULAR</span></h3>
+              <span class="member-price">₹1999</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 25 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 60 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Priority Booking</li>
+            <li><i data-lucide="check"></i> 10% Discount on Food</li>
+          </ul>
+          <a href="#contact" class="btn-member purple-member-btn">GET PRO</a>
+        </article>
+
+        <article class="member-card elite reveal delay-2">
+          <div class="member-head">
+            <span class="member-icon gold"><i data-lucide="crown"></i></span>
+            <div>
+              <h3>ELITE</h3>
+              <span class="member-price">₹3999</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 60 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 90 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Priority Booking</li>
+            <li><i data-lucide="check"></i> 15% Discount on Food</li>
+            <li><i data-lucide="check"></i> Exclusive Offers</li>
+          </ul>
+          <a href="#contact" class="btn-member gold-member-btn">GET ELITE</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== THE VIBE (Gallery) ==================== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> THE VIBE <span class="dash"></span></h2>
+      <div class="vibe-grid reveal">
+        <div class="vibe-item v1"></div>
+        <div class="vibe-item v2"></div>
+        <div class="vibe-item v3 vibe-label">
+          <div class="vibe-brand">GAME<br>VEDA</div>
+        </div>
+        <div class="vibe-item v4"></div>
+        <div class="vibe-item v5 vibe-label2">
+          <div class="vibe-mood">GOOD<br>FOOD<br>MOOD</div>
+        </div>
+        <div class="vibe-item v6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="reviews-grid">
+        <!-- Left panel -->
+        <div class="reviews-hero panel reveal">
+          <h2 class="reviews-title">LOVED BY<br>GAMERS</h2>
+          <div class="stars-row">
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+          </div>
+          <p class="reviews-count">4.9/5 <span>(350+ Reviews)</span></p>
+        </div>
+
+        <!-- Review cards -->
+        <article class="testimonial reveal delay-1">
+          <div class="reviewer-top">
+            <span class="avatar-big"></span>
+            <div>
+              <strong>Rohan Mehta</strong>
+              <div class="stars-row sm">
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Best gaming café in Delhi! Amazing setup and vibe."</p>
+        </article>
+
+        <article class="testimonial reveal delay-2">
+          <div class="reviewer-top">
+            <span class="avatar-big purple-av"></span>
+            <div>
+              <strong>Ankit Sharma</strong>
+              <div class="stars-row sm">
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+              </div>
+            </div>
+          </div>
+          <p>"The VR experience is absolutely next level!"</p>
+        </article>
+
+        <article class="testimonial reveal delay-3">
+          <div class="reviewer-top">
+            <span class="avatar-big green-av"></span>
+            <div>
+              <strong>Karan Singh</strong>
+              <div class="stars-row sm">
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+                <i data-lucide="star" class="star-filled"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Great place to hangout with friends &amp; chill."</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <!-- Visit Us -->
+        <div class="footer-col reveal">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <span class="logo-icon sm-logo"><i data-lucide="triangle" class="logo-tri sm-tri"></i></span>
+            <div class="footer-logo-text">GAME<br><span>VEDA</span></div>
+          </div>
+          <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp; create memories.</p>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</li>
+            <li><i data-lucide="phone"></i> +91 85959 24912</li>
+            <li><i data-lucide="mail"></i> hello@gameveda.in</li>
+            <li><i data-lucide="clock"></i> Mon - Sun : 11:00 AM - 11:00 PM</li>
+          </ul>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-col map-col reveal delay-1">
+          <div class="map-box">
+            <div class="map-pin-wrap">
+              <i data-lucide="map-pin" class="map-big-pin"></i>
+              <span class="map-pulse"></span>
+            </div>
+            <p class="map-label">Palam, New Delhi</p>
+          </div>
+        </div>
+
+        <!-- Quick Links + Help -->
+        <div class="footer-col reveal delay-2">
+          <div class="footer-links-row">
+            <div>
+              <p class="footer-label">QUICK LINKS</p>
+              <ul class="footer-links">
+                <li><a href="#home"><i data-lucide="chevron-right"></i> Home</a></li>
+                <li><a href="#gallery"><i data-lucide="chevron-right"></i> Gallery</a></li>
+                <li><a href="#about"><i data-lucide="chevron-right"></i> About</a></li>
+                <li><a href="#zones"><i data-lucide="chevron-right"></i> Zones</a></li>
+                <li><a href="#pricing"><i data-lucide="chevron-right"></i> Pricing</a></li>
+                <li><a href="#membership"><i data-lucide="chevron-right"></i> Membership</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-label">HELP</p>
+              <ul class="footer-links">
+                <li><a href="#contact"><i data-lucide="chevron-right"></i> Contact Us</a></li>
+                <li><a href="#"><i data-lucide="chevron-right"></i> FAQs</a></li>
+                <li><a href="#"><i data-lucide="chevron-right"></i> Terms &amp; Conditions</a></li>
+                <li><a href="#"><i data-lucide="chevron-right"></i> Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ready to Play -->
+        <div class="footer-col reveal delay-3">
+          <p class="footer-label"><i data-lucide="zap"></i> READY TO PLAY?</p>
+          <p class="footer-ready-sub">Book your slot now and level up your experience!</p>
+          <div class="footer-cta-btns">
+            <a href="#contact" class="btn-primary footer-cta"><i data-lucide="calendar-check"></i> BOOK YOUR SLOT</a>
+            <a href="https://wa.me/918595924912" class="btn-whatsapp"><i data-lucide="message-circle"></i> WHATSAPP US</a>
+          </div>
+          <div class="footer-follow">
+            <p class="footer-label">FOLLOW US</p>
+            <div class="social-row">
+              <a href="#" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+              <a href="#" class="social-btn" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <span class="logo-icon xs-logo"><i data-lucide="triangle" class="logo-tri xs-tri"></i></span>
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> Game Veda. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
 </body>
 </html>
