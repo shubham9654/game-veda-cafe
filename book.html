@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book your slot at Game Veda - India's ultimate gaming cafe in Palam, New Delhi." />
+  <title>Book Now | Game Veda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <script>
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background grid -->
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"><i data-lucide="triangle" class="logo-tri"></i></span>
+        <span class="logo-text">GAME<br><span class="logo-veda">VEDA</span></span>
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="index.html">Home</a>
+      <a class="mobile-link" href="index.html#zones">Zones</a>
+      <a class="mobile-link" href="index.html#pricing">Pricing</a>
+      <a class="mobile-link" href="index.html#membership">Membership</a>
+      <a class="mobile-link" href="index.html#gallery">Gallery</a>
+    </div>
+  </header>
+
+  <!-- ==================== BOOKING FORM ==================== -->
+  <section class="section">
+    <div class="container" style="max-width: 800px !important;">
+      <h1 class="section-title reveal"><span class="dash"></span> BOOK YOUR SLOT <span class="dash"></span></h1>
+      <p class="text-center text-slate-400 mb-8 text-sm max-w-lg mx-auto reveal delay-1 booking-subtext">
+        Level up your experience! Fill in your details below and we will confirm your booking instantly via WhatsApp.
+      </p>
+
+      <div class="booking-card reveal delay-2">
+        <form id="bookingForm" class="booking-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <div class="input-wrap">
+                <i data-lucide="user"></i>
+                <input type="text" id="fullName" class="form-input" placeholder="Enter your name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <div class="input-wrap">
+                <i data-lucide="phone"></i>
+                <input type="tel" id="phone" class="form-input" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a 10 digit phone number" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="bookingDate">Date *</label>
+              <div class="input-wrap">
+                <i data-lucide="calendar"></i>
+                <input type="date" id="bookingDate" class="form-input" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="bookingTime">Time *</label>
+              <div class="input-wrap">
+                <i data-lucide="clock"></i>
+                <input type="time" id="bookingTime" class="form-input" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="package">Select Zone / Package *</label>
+              <div class="input-wrap">
+                <i data-lucide="gamepad-2"></i>
+                <select id="package" class="form-input" required>
+                  <option value="" disabled selected>Choose a package</option>
+                  <optgroup label="PlayStation">
+                    <option value="ps-1hr">PlayStation - 1 Hr (₹160)</option>
+                    <option value="ps-2hr">PlayStation - 2 Hrs (₹280)</option>
+                    <option value="ps-4hr">PlayStation - 4 Hrs (₹500)</option>
+                  </optgroup>
+                  <optgroup label="VR Experience">
+                    <option value="vr-30min">VR - 30 Min (₹350)</option>
+                    <option value="vr-1hr">VR - 1 Hr (₹600)</option>
+                  </optgroup>
+                  <optgroup label="Combos">
+                    <option value="combo-drink">Game + Drink (₹249)</option>
+                    <option value="combo-food">Game + Food (₹299)</option>
+                  </optgroup>
+                  <optgroup label="Memberships">
+                    <option value="mem-basic">Basic Membership (₹999)</option>
+                    <option value="mem-pro">Pro Membership (₹1999)</option>
+                    <option value="mem-elite">Elite Membership (₹3999)</option>
+                  </optgroup>
+                  <optgroup label="Other">
+                    <option value="pool">Pool Table</option>
+                    <option value="cafe">Café Reservation</option>
+                  </optgroup>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="people">Number of People *</label>
+              <div class="input-wrap">
+                <i data-lucide="users"></i>
+                <input type="number" id="people" class="form-input" min="1" max="20" placeholder="1" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="requests">Special Requests (Optional)</label>
+            <div class="input-wrap textarea-wrap">
+              <i data-lucide="message-square"></i>
+              <textarea id="requests" class="form-input" rows="3" placeholder="Any special requirements, games you want to play, etc."></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary form-submit">
+            <i data-lucide="send"></i> CONFIRM BOOKING VIA WHATSAPP
+          </button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+          <div class="success-icon"><i data-lucide="check-circle"></i></div>
+          <h3>Redirecting to WhatsApp!</h3>
+          <p>If you aren't redirected automatically, please <a id="waLinkFallback" href="#" class="wa-link" target="_blank">click here</a>.</p>
+          <button id="bookAnother" class="btn-outline mt-4">Book Another Slot</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <!-- Visit Us -->
+        <div class="footer-col">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <span class="logo-icon sm-logo"><i data-lucide="triangle" class="logo-tri sm-tri"></i></span>
+            <div class="footer-logo-text">GAME<br><span>VEDA</span></div>
+          </div>
+          <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp; create memories.</p>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</li>
+            <li><i data-lucide="phone"></i> +91 85959 24912</li>
+            <li><i data-lucide="mail"></i> hello@gameveda.in</li>
+            <li><i data-lucide="clock"></i> Mon - Sun : 11:00 AM - 11:00 PM</li>
+          </ul>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-col map-col">
+          <div class="map-box">
+            <div class="map-pin-wrap">
+              <i data-lucide="map-pin" class="map-big-pin"></i>
+              <span class="map-pulse"></span>
+            </div>
+            <p class="map-label">Palam, New Delhi</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <p class="footer-label">QUICK LINKS</p>
+          <ul class="footer-links">
+            <li><a href="index.html"><i data-lucide="chevron-right"></i> Home</a></li>
+            <li><a href="index.html#zones"><i data-lucide="chevron-right"></i> Zones</a></li>
+            <li><a href="index.html#pricing"><i data-lucide="chevron-right"></i> Pricing</a></li>
+            <li><a href="index.html#membership"><i data-lucide="chevron-right"></i> Membership</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <span class="logo-icon xs-logo"><i data-lucide="triangle" class="logo-tri xs-tri"></i></span>
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> Game Veda. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/main.js" defer></script>
+  <script src="./src/js/book.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
