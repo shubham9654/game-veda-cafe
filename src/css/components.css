@@ -157,12 +157,9 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
 .social-btn svg { width: 15px; height: 15px; }
 .social-btn:hover { border-color: rgba(168,85,247,.5); color: #a855f7; background: rgba(168,85,247,.08); }
 .map-col { }
-.map-box { height: 100%; min-height: 10rem; border: 1px solid rgba(148,163,184,.15); border-radius: .85rem; background: linear-gradient(135deg, #1e293b, #0f172a); display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.map-pin-wrap { position: relative; margin-bottom: .5rem; }
-.map-big-pin { width: 28px; height: 28px; color: #ef4444; }
-.map-pulse { position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%); width: 20px; height: 8px; background: rgba(239,68,68,.25); border-radius: 50%; animation: pulse 2s ease-in-out infinite; }
-@keyframes pulse { 0%, 100% { transform: translateX(-50%) scale(1); opacity: .5; } 50% { transform: translateX(-50%) scale(1.8); opacity: .1; } }
-.map-label { font-size: .7rem; color: #64748b; }
+.map-box { height: 100%; min-height: 10rem; border: 1px solid rgba(148,163,184,.15); border-radius: .85rem; background: #0f172a; position: relative; overflow: hidden; }
+.map-box iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; filter: invert(90%) hue-rotate(180deg) contrast(85%) opacity(0.8); transition: filter 0.3s, opacity 0.3s; }
+.map-box:hover iframe { filter: invert(90%) hue-rotate(180deg) contrast(100%) opacity(1); }
 .footer-links-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .footer-links { display: flex; flex-direction: column; gap: .3rem; }
 .footer-links a { font-size: .72rem; color: #94a3b8; display: flex; align-items: center; gap: .2rem; transition: color .2s; }
@@ -272,6 +269,8 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
 .light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #475569; }
 .light-mode .social-btn { color: #475569; border-color: rgba(0,0,0,.15); }
 .light-mode .map-box { background: #f1f5f9; border-color: rgba(0,0,0,.1); }
+.light-mode .map-box iframe { filter: none; opacity: 0.9; }
+.light-mode .map-box:hover iframe { opacity: 1; }
 .light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(0,0,0,.1); }
 .light-mode .btn-price, .light-mode .btn-member { color: #0f172a; }
 .light-mode .zone-card:hover, .light-mode .price-card:hover, .light-mode .member-card:hover { border-color: rgba(0,0,0,.2); }
