@@ -73,7 +73,7 @@ body.light-mode .theme-toggle .sun-icon { display: none; }
 .hero-location { font-size: .75rem; color: #64748b; text-transform: uppercase; letter-spacing: .08em; display: flex; align-items: center; }
 .hero-location svg { width: 14px; height: 14px; }
 .hero-visual { transform-style: preserve-3d; will-change: transform; }
-.hero-image { border-radius: 1rem; min-height: 15rem; border: 1px solid rgba(148,163,184,.2); background: radial-gradient(circle at 20% 85%, rgba(236,72,153,.2), transparent 38%), radial-gradient(circle at 80% 8%, rgba(59,130,246,.32), transparent 45%), linear-gradient(135deg, #100a26, #071224 56%, #13061f); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+.hero-image { border-radius: 1rem; min-height: 15rem; border: 1px solid rgba(148,163,184,.2); background: url('../images/hero/banner.jpg') center/cover no-repeat; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
 .hero-neon-text { font-size: clamp(2rem,4vw,3.3rem); line-height: .95; font-weight: 900; text-align: center; color: #f8fafc; text-shadow: 0 0 14px rgba(168,85,247,.45), 0 0 24px rgba(34,211,238,.28); position: relative; z-index: 2; }
 .hero-particles { position: absolute; inset: 0; }
 .hero-particles span { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #a855f7; opacity: .5; animation: float 4s ease-in-out infinite; }

@@ -6,10 +6,10 @@
 .zone-card h3 { font-weight: 700; font-size: .82rem; margin: .55rem 0 .35rem; letter-spacing: .05em; color: #f1f5f9; }
 .zone-card p { color: #94a3b8; font-size: .72rem; line-height: 1.5; }
 .zone-image { height: 8.5rem; border-radius: .75rem; border: 1px solid rgba(148,163,184,.2); }
-.image-ps { background: linear-gradient(145deg, #1e293b, #0f172a 50%, #0c4a6e); }
-.image-vr { background: linear-gradient(145deg, #111827, #1e1b4b 50%, #0f172a); }
-.image-pool { background: linear-gradient(145deg, #1f2937, #14532d 55%, #0f172a); }
-.image-cafe { background: linear-gradient(145deg, #3f1d14, #0f172a 55%, #312e81); }
+.image-ps { background: url('../images/zones/playstation.jpg') center/cover no-repeat; }
+.image-vr { background: url('../images/zones/vr.jpg') center/cover no-repeat; }
+.image-pool { background: url('../images/zones/pool.jpg') center/cover no-repeat; }
+.image-cafe { background: url('../images/zones/cafe.jpg') center/cover no-repeat; }
 .zone-badge { position: absolute; top: 1.2rem; right: 1.2rem; width: 32px; height: 32px; border-radius: 50%; background: rgba(34,211,238,.15); color: #22d3ee; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); border: 1px solid rgba(34,211,238,.25); z-index: 2; }
 .zone-badge i, .zone-badge svg { width: 16px; height: 16px; }
 .zone-badge.purple { background: rgba(168,85,247,.15); color: #a855f7; border-color: rgba(168,85,247,.25); }
