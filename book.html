@@ -96,13 +96,15 @@
                 <i data-lucide="calendar"></i>
                 <input type="date" id="bookingDate" class="form-input" required>
               </div>
+              <small style="font-size: 0.7rem; color: #64748b; margin-top: 0.3rem; display: block;">Min. 1 day advance booking</small>
             </div>
             <div class="form-group">
               <label for="bookingTime">Preferred Time *</label>
               <div class="input-wrap">
                 <i data-lucide="clock"></i>
-                <input type="time" id="bookingTime" class="form-input" required>
+                <input type="time" id="bookingTime" class="form-input" min="11:00" max="23:00" required>
               </div>
+              <small style="font-size: 0.7rem; color: #64748b; margin-top: 0.3rem; display: block;">11:00 AM - 11:00 PM</small>
             </div>
           </div>
 

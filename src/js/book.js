@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Set minimum date to tomorrow
+  const bookingDateInput = document.getElementById('bookingDate');
+  if (bookingDateInput) {
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const minDate = tomorrow.toISOString().split('T')[0];
+    bookingDateInput.min = minDate;
+    bookingDateInput.value = minDate; // Set default to tomorrow
+  }
+
+  // Set time constraints and default
+  const bookingTimeInput = document.getElementById('bookingTime');
+  if (bookingTimeInput) {
+    bookingTimeInput.min = '11:00';
+    bookingTimeInput.max = '23:00';
+    bookingTimeInput.value = '12:00'; // Default to noon
+  }
+
   const bookingForm = document.getElementById('bookingForm');
   const successMessage = document.getElementById('successMessage');
   const waLinkFallback = document.getElementById('waLinkFallback');
@@ -25,13 +43,29 @@ document.addEventListener("DOMContentLoaded", () => {
       const time = document.getElementById('bookingTime').value;
       const packageSelected = document.getElementById('package').options[document.getElementById('package').selectedIndex].text;
 
+      // Validate time is within business hours
+      const [hours, minutes] = time.split(':').map(Number);
+      if (hours < 11 || hours >= 23) {
+        alert('Please select a time between 11:00 AM and 11:00 PM');
+        return;
+      }
+
+      // Format date for display
+      const dateObj = new Date(date);
+      const formattedDate = dateObj.toLocaleDateString('en-IN', { 
+        weekday: 'short', 
+        year: 'numeric', 
+        month: 'short', 
+        day: 'numeric' 
+      });
+
       // Construct WhatsApp message
       const businessNumber = '918595924912';
       let message = `Hello! I want to book a slot at Game Veda\n\n`;
       message += `📝 *Booking Details:*\n`;
       message += `Name: ${fullName}\n`;
       message += `Contact: ${phone}\n`;
-      message += `Date: ${date}\n`;
+      message += `Date: ${formattedDate}\n`;
       message += `Time: ${time}\n`;
       message += `Package: ${packageSelected}\n\n`;
       message += `Please confirm my booking.`;
@@ -61,6 +95,20 @@ document.addEventListener("DOMContentLoaded", () => {
       if (bookingForm) {
         bookingForm.reset();
         bookingForm.classList.remove('hidden');
+        
+        // Reset date and time to proper defaults
+        const bookingDateInput = document.getElementById('bookingDate');
+        const bookingTimeInput = document.getElementById('bookingTime');
+        
+        if (bookingDateInput) {
+          const tomorrow = new Date();
+          tomorrow.setDate(tomorrow.getDate() + 1);
+          bookingDateInput.value = tomorrow.toISOString().split('T')[0];
+        }
+        
+        if (bookingTimeInput) {
+          bookingTimeInput.value = '12:00';
+        }
       }
     });
   }
