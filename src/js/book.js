@@ -24,30 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const date = document.getElementById('bookingDate').value;
       const time = document.getElementById('bookingTime').value;
       const packageSelected = document.getElementById('package').options[document.getElementById('package').selectedIndex].text;
-      const people = document.getElementById('people').value;
-      const requests = document.getElementById('requests').value;
 
       // Construct WhatsApp message
-      const waNumber = '918595924912';
-      let message = `*New Booking Request - Game Veda*\n\n`;
-      message += `*Name:* ${fullName}\n`;
-      message += `*Phone:* ${phone}\n`;
-      message += `*Date:* ${date}\n`;
-      message += `*Time:* ${time}\n`;
-      message += `*Package/Zone:* ${packageSelected}\n`;
-      message += `*People:* ${people}\n`;
-      
-      if (requests.trim()) {
-        message += `*Special Requests:* ${requests}\n`;
-      }
+      const businessNumber = '918595924912';
+      let message = `Hello! I want to book a slot at Game Veda\n\n`;
+      message += `📝 *Booking Details:*\n`;
+      message += `Name: ${fullName}\n`;
+      message += `Contact: ${phone}\n`;
+      message += `Date: ${date}\n`;
+      message += `Time: ${time}\n`;
+      message += `Package: ${packageSelected}\n\n`;
+      message += `Please confirm my booking.`;
       
       const encodedMessage = encodeURIComponent(message);
-      const mailUrl = `mailto:hello@gameveda.in?subject=New Booking Request&body=${encodedMessage}`;
+      const whatsappUrl = `https://wa.me/${businessNumber}?text=${encodedMessage}`;
 
       // Update fallback link and show success
-      const mailLinkFallback = document.getElementById('mailLinkFallback');
-      if (mailLinkFallback) {
-        mailLinkFallback.href = mailUrl;
+      const waLinkFallback = document.getElementById('waLinkFallback');
+      if (waLinkFallback) {
+        waLinkFallback.href = whatsappUrl;
       }
       
       bookingForm.classList.add('hidden');
@@ -55,8 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
         successMessage.classList.remove('hidden');
       }
 
-      // Open Mail client
-      window.location.href = mailUrl;
+      // Open WhatsApp
+      window.open(whatsappUrl, '_blank');
     });
   }
 

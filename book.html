@@ -67,21 +67,21 @@
     <div class="container" style="max-width: 800px !important;">
       <h1 class="section-title reveal"><span class="dash"></span> BOOK YOUR SLOT <span class="dash"></span></h1>
       <p class="text-center text-slate-400 mb-8 text-sm max-w-lg mx-auto reveal delay-1 booking-subtext">
-        Level up your experience! Fill in your details below and we will confirm your booking instantly via WhatsApp.
+        Level up your experience! Fill in your details and we'll send you a confirmation link via WhatsApp to complete your booking.
       </p>
 
       <div class="booking-card reveal delay-2">
         <form id="bookingForm" class="booking-form">
           <div class="form-row">
             <div class="form-group">
-              <label for="fullName">Full Name *</label>
+              <label for="fullName">Your Name *</label>
               <div class="input-wrap">
                 <i data-lucide="user"></i>
                 <input type="text" id="fullName" class="form-input" placeholder="Enter your name" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number *</label>
+              <label for="phone">WhatsApp Number *</label>
               <div class="input-wrap">
                 <i data-lucide="phone"></i>
                 <input type="tel" id="phone" class="form-input" placeholder="e.g. 9876543210" pattern="[0-9]{10}" title="Please enter a 10 digit phone number" required>
@@ -91,14 +91,14 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label for="bookingDate">Date *</label>
+              <label for="bookingDate">Booking Date *</label>
               <div class="input-wrap">
                 <i data-lucide="calendar"></i>
                 <input type="date" id="bookingDate" class="form-input" required>
               </div>
             </div>
             <div class="form-group">
-              <label for="bookingTime">Time *</label>
+              <label for="bookingTime">Preferred Time *</label>
               <div class="input-wrap">
                 <i data-lucide="clock"></i>
                 <input type="time" id="bookingTime" class="form-input" required>
@@ -106,64 +106,39 @@
             </div>
           </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label for="package">Select Zone / Package *</label>
-              <div class="input-wrap">
-                <i data-lucide="gamepad-2"></i>
-                <select id="package" class="form-input" required>
-                  <option value="" disabled selected>Choose a package</option>
-                  <optgroup label="PlayStation">
-                    <option value="ps-1hr">PlayStation - 1 Hr (₹160)</option>
-                    <option value="ps-2hr">PlayStation - 2 Hrs (₹280)</option>
-                    <option value="ps-4hr">PlayStation - 4 Hrs (₹500)</option>
-                  </optgroup>
-                  <optgroup label="VR Experience">
-                    <option value="vr-30min">VR - 30 Min (₹350)</option>
-                    <option value="vr-1hr">VR - 1 Hr (₹600)</option>
-                  </optgroup>
-                  <optgroup label="Combos">
-                    <option value="combo-drink">Game + Drink (₹249)</option>
-                    <option value="combo-food">Game + Food (₹299)</option>
-                  </optgroup>
-                  <optgroup label="Memberships">
-                    <option value="mem-basic">Basic Membership (₹999)</option>
-                    <option value="mem-pro">Pro Membership (₹1999)</option>
-                    <option value="mem-elite">Elite Membership (₹3999)</option>
-                  </optgroup>
-                  <optgroup label="Other">
-                    <option value="pool">Pool Table</option>
-                    <option value="cafe">Café Reservation</option>
-                  </optgroup>
-                </select>
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="people">Number of People *</label>
-              <div class="input-wrap">
-                <i data-lucide="users"></i>
-                <input type="number" id="people" class="form-input" min="1" max="20" placeholder="1" required>
-              </div>
-            </div>
-          </div>
-
           <div class="form-group">
-            <label for="requests">Special Requests (Optional)</label>
-            <div class="input-wrap textarea-wrap">
-              <i data-lucide="message-square"></i>
-              <textarea id="requests" class="form-input" rows="3" placeholder="Any special requirements, games you want to play, etc."></textarea>
+            <label for="package">Select Plan / Package *</label>
+            <div class="input-wrap">
+              <i data-lucide="gamepad-2"></i>
+              <select id="package" class="form-input" required>
+                <option value="" disabled selected>Choose a package</option>
+                <optgroup label="Membership Plans">
+                  <option value="mem-platinum">Platinum Plan - 100 Hours (₹3299)</option>
+                  <option value="mem-gold">Gold Plan - 60 Hours (₹2599)</option>
+                  <option value="mem-silver">Silver Plan - 30 Hours (₹1499)</option>
+                </optgroup>
+                <optgroup label="PlayStation">
+                  <option value="ps-1hr">PlayStation - 1 Hr (₹160)</option>
+                  <option value="ps-2hr">PlayStation - 2 Hrs (₹280)</option>
+                  <option value="ps-4hr">PlayStation - 4 Hrs (₹500)</option>
+                </optgroup>
+                <optgroup label="VR Experience">
+                  <option value="vr-30min">VR - 30 Min (₹350)</option>
+                  <option value="vr-1hr">VR - 1 Hr (₹600)</option>
+                </optgroup>
+              </select>
             </div>
           </div>
 
           <button type="submit" class="btn-primary form-submit">
-            <i data-lucide="mail"></i> CONFIRM BOOKING VIA EMAIL
+            <i data-lucide="send"></i> SEND TO WHATSAPP
           </button>
         </form>
 
         <div id="successMessage" class="success-message hidden">
           <div class="success-icon"><i data-lucide="check-circle"></i></div>
-          <h3>Redirecting to Email!</h3>
-          <p>If you aren't redirected automatically, please <a id="mailLinkFallback" href="#" class="wa-link" target="_blank">click here</a>.</p>
+          <h3>Booking Details Sent!</h3>
+          <p>Open WhatsApp and scan the QR code or <a id="waLinkFallback" href="#" class="wa-link" target="_blank">click here to chat</a>. Share your booking details to confirm your slot!</p>
           <button id="bookAnother" class="btn-outline mt-4">Book Another Slot</button>
         </div>
       </div>
