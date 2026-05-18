@@ -149,20 +149,91 @@ body.light-mode .theme-toggle .sun-icon { display: none; }
   .mobile-menu { display: none !important; }
 }
 
-/* === LIGHT MODE OVERRIDES === */
-body.light-mode { background: #f8fafc; color: #0f172a; color-scheme: light; }
-.light-mode .site-header { background: rgba(255,255,255,.85); border-bottom-color: rgba(0,0,0,.08); }
-.light-mode .nav-link { color: #475569; }
-.light-mode .nav-link:hover, .light-mode .nav-link.active { color: #0f172a; background: rgba(0,0,0,.06); }
-.light-mode .hamburger, .light-mode .theme-toggle { color: #0f172a; border-color: rgba(0,0,0,.15); }
-.light-mode .mobile-menu { border-top-color: rgba(0,0,0,.08); background: #f8fafc; }
-.light-mode .mobile-link { color: #475569; }
-.light-mode .btn-outline { border-color: rgba(15,23,42,.2); color: #0f172a; background: transparent; }
-.light-mode .hero-grid-layout { background: linear-gradient(180deg, #ffffff, #f1f5f9); border-color: rgba(0,0,0,.1); box-shadow: 0 20px 40px rgba(0,0,0,.05); }
-.light-mode .hero-sub { color: #475569; }
-.light-mode .hero-location { color: #64748b; }
-.light-mode .hero-stat { background: #ffffff; border-color: rgba(0,0,0,.1); color: #475569; }
-.light-mode .stat-sub { color: #64748b; }
-.light-mode .feature-chip { background: #ffffff; border-color: rgba(0,0,0,.1); }
+/* === DARK MODE - NEON GAMING ENHANCEMENTS === */
+body:not(.light-mode) { 
+  background: linear-gradient(135deg, #0a0a1a 0%, #0f0f2e 50%, #0a0a1a 100%);
+}
+
+/* Enhanced neon glow effects for dark mode */
+body:not(.light-mode) .hero-grid-layout {
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 
+    0 0 20px rgba(168, 85, 247, 0.3),
+    0 0 40px rgba(34, 211, 238, 0.2),
+    inset 0 0 30px rgba(168, 85, 247, 0.05);
+}
+
+body:not(.light-mode) .zone-card,
+body:not(.light-mode) .price-card,
+body:not(.light-mode) .member-card,
+body:not(.light-mode) .panel {
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+body:not(.light-mode) .zone-card:hover,
+body:not(.light-mode) .price-card:hover,
+body:not(.light-mode) .member-card:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4), 0 0 15px rgba(34, 211, 238, 0.2);
+}
+
+body:not(.light-mode) .btn-primary {
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.4), 0 0 30px rgba(34, 211, 238, 0.2);
+}
+
+body:not(.light-mode) .btn-primary:hover {
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5), 0 0 40px rgba(34, 211, 238, 0.3);
+}
+
+body:not(.light-mode) .gradient-text {
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+}
+
+body:not(.light-mode) .hero-neon-text {
+  text-shadow: 
+    0 0 14px rgba(168, 85, 247, 0.6),
+    0 0 24px rgba(34, 211, 238, 0.4),
+    0 0 35px rgba(236, 72, 153, 0.2);
+}
+
+body:not(.light-mode) .pill {
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.2);
+}
+
+/* === LIGHT MODE - DARKER WHITE THEME === */
+body.light-mode { background: #d1d5db; color: #0f172a; color-scheme: light; }
+.light-mode .site-header { background: rgba(229, 231, 235, 0.98); border-bottom-color: rgba(0, 0, 0, 0.2); }
+.light-mode .nav-link { color: #1f2937; }
+.light-mode .nav-link:hover, .light-mode .nav-link.active { color: #0f172a; background: rgba(0, 0, 0, 0.12); }
+.light-mode .hamburger, .light-mode .theme-toggle { color: #0f172a; border-color: rgba(0, 0, 0, 0.2); }
+.light-mode .mobile-menu { border-top-color: rgba(0, 0, 0, 0.2); background: #e5e7eb; }
+.light-mode .mobile-link { color: #1f2937; }
+.light-mode .btn-outline { border-color: rgba(15, 23, 42, 0.35); color: #0f172a; background: rgba(229, 231, 235, 0.9); }
+.light-mode .btn-outline:hover { background: rgba(209, 213, 219, 0.9); }
+.light-mode .hero-grid-layout { background: linear-gradient(180deg, #e5e7eb, #d1d5db); border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12); }
+.light-mode .hero-sub { color: #1f2937; }
+.light-mode .hero-location { color: #4b5563; }
+.light-mode .hero-stat { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); color: #1f2937; }
+.light-mode .stat-sub { color: #4b5563; }
+.light-mode .feature-chip { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); }
 .light-mode .feature-chip strong { color: #0f172a; }
-.light-mode .feature-chip span { color: #475569; }
+.light-mode .feature-chip span { color: #1f2937; }
+.light-mode .zone-card, .light-mode .price-card, .light-mode .member-card, .light-mode .panel { 
+  background: linear-gradient(180deg, #e5e7eb, #d1d5db); 
+  border-color: rgba(0, 0, 0, 0.2); 
+}
+.light-mode .zone-card:hover, .light-mode .price-card:hover, .light-mode .member-card:hover { 
+  border-color: rgba(168, 85, 247, 0.4);
+  background: #f3f4f6;
+}
+.light-mode .vibe-brand, .light-mode .vibe-mood { text-shadow: 0 0 8px rgba(0, 0, 0, 0.12); }
+.light-mode .pill { border-color: rgba(168, 85, 247, 0.4); color: #a855f7; }
+.light-mode .hero-neon-text { text-shadow: 0 0 10px rgba(0, 0, 0, 0.12); }
+.light-mode .gradient-text { 
+  background: linear-gradient(90deg, #d946a6, #7c3aed, #0891b2); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  background-clip: text; 
+}
