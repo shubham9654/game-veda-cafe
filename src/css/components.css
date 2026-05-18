@@ -256,42 +256,42 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* === LIGHT MODE OVERRIDES - DARKER WHITE THEME === */
-.light-mode .zone-card { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); }
-.light-mode .zone-card:hover { background: #f3f4f6; border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 10px 25px rgba(168, 85, 247, 0.12); }
-.light-mode .zone-card h3 { color: #0f172a; }
-.light-mode .zone-card p { color: #1f2937; }
-.light-mode .price-card { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); }
-.light-mode .price-card:hover { background: #f3f4f6; border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 10px 25px rgba(168, 85, 247, 0.12); }
-.light-mode .price-amt { color: #0f172a; }
-.light-mode .price-dur { color: #4b5563; }
-.light-mode .member-card { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); }
-.light-mode .member-card:hover { background: #f3f4f6; border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 10px 25px rgba(168, 85, 247, 0.12); }
-.light-mode .member-price { color: #0f172a; }
-.light-mode .member-features li { color: #1f2937; }
-.light-mode .panel, .light-mode .testimonial { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); }
-.light-mode .testimonial p { color: #1f2937; }
-.light-mode .footer-label { color: #1f2937; }
-.light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #1f2937; }
-.light-mode .social-btn { color: #1f2937; border-color: rgba(0, 0, 0, 0.2); }
-.light-mode .social-btn:hover { background: rgba(168, 85, 247, 0.12); color: #a855f7; border-color: rgba(168, 85, 247, 0.4); }
-.light-mode .map-box { background: #d1d5db; border-color: rgba(0, 0, 0, 0.2); }
-.light-mode .map-box iframe { filter: none; opacity: 0.9; }
+/* === LIGHT MODE OVERRIDES - LOGO THEME (LILAC/PEACH) === */
+.light-mode .zone-card { background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border-color: rgba(168, 85, 247, 0.2); box-shadow: 0 10px 20px rgba(168, 85, 247, 0.05); }
+.light-mode .zone-card:hover { background: #ffffff; border-color: rgba(251, 146, 60, 0.4); box-shadow: 0 10px 25px rgba(251, 146, 60, 0.15); }
+.light-mode .zone-card h3 { color: #1e1b4b; }
+.light-mode .zone-card p { color: #4c1d95; }
+.light-mode .price-card { background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border-color: rgba(168, 85, 247, 0.2); box-shadow: 0 10px 20px rgba(168, 85, 247, 0.05); }
+.light-mode .price-card:hover { background: #ffffff; border-color: rgba(251, 146, 60, 0.4); box-shadow: 0 10px 25px rgba(251, 146, 60, 0.15); }
+.light-mode .price-amt { color: #1e1b4b; }
+.light-mode .price-dur { color: #6b21a8; }
+.light-mode .member-card { background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border-color: rgba(168, 85, 247, 0.2); box-shadow: 0 10px 20px rgba(168, 85, 247, 0.05); }
+.light-mode .member-card:hover { background: #ffffff; border-color: rgba(251, 146, 60, 0.4); box-shadow: 0 10px 25px rgba(251, 146, 60, 0.15); }
+.light-mode .member-price { color: #1e1b4b; }
+.light-mode .member-features li { color: #4c1d95; }
+.light-mode .panel, .light-mode .testimonial { background: rgba(255,255,255,0.6); backdrop-filter: blur(8px); border-color: rgba(168, 85, 247, 0.2); box-shadow: 0 10px 20px rgba(168, 85, 247, 0.05); }
+.light-mode .testimonial p { color: #4c1d95; }
+.light-mode .footer-label { color: #6b21a8; }
+.light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #4c1d95; }
+.light-mode .social-btn { color: #6b21a8; border-color: rgba(168, 85, 247, 0.3); }
+.light-mode .social-btn:hover { background: rgba(168, 85, 247, 0.15); color: #9333ea; border-color: rgba(168, 85, 247, 0.5); }
+.light-mode .map-box { background: rgba(255,255,255,0.5); border-color: rgba(168, 85, 247, 0.3); }
+.light-mode .map-box iframe { filter: none; opacity: 0.95; }
 .light-mode .map-box:hover iframe { opacity: 1; }
-.light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(0, 0, 0, 0.2); background: #e5e7eb; }
-.light-mode .btn-price, .light-mode .btn-member { color: #0f172a; border-color: rgba(0, 0, 0, 0.2); }
-.light-mode .btn-price:hover, .light-mode .btn-member:hover { background: rgba(168, 85, 247, 0.08); }
+.light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(168, 85, 247, 0.2); background: rgba(255,255,255,0.4); }
+.light-mode .btn-price, .light-mode .btn-member { color: #4c1d95; border-color: rgba(168, 85, 247, 0.3); }
+.light-mode .btn-price:hover, .light-mode .btn-member:hover { background: rgba(168, 85, 247, 0.1); }
 
 /* Light mode for Booking Form */
-.light-mode .booking-subtext { color: #1f2937; }
-.light-mode .booking-card { background: #e5e7eb; border-color: rgba(0, 0, 0, 0.2); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); }
-.light-mode .form-group label { color: #1f2937; }
-.light-mode .form-input { background: #f3f4f6; border-color: rgba(0, 0, 0, 0.2); color: #0f172a; }
+.light-mode .booking-subtext { color: #4c1d95; }
+.light-mode .booking-card { background: rgba(255,255,255,0.75); backdrop-filter: blur(12px); border-color: rgba(168, 85, 247, 0.25); box-shadow: 0 20px 40px rgba(168, 85, 247, 0.1); }
+.light-mode .form-group label { color: #1e1b4b; }
+.light-mode .form-input { background: rgba(255,255,255,0.6); border-color: rgba(168, 85, 247, 0.3); color: #1e1b4b; }
 .light-mode .form-input:focus { background: #ffffff; border-color: rgba(251, 146, 60, 0.6); box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.15); }
-.light-mode .form-input::placeholder { color: #6b7280; }
-.light-mode select.form-input option, .light-mode select.form-input optgroup { background: #ffffff; color: #0f172a; }
-.light-mode .success-message h3 { color: #0f172a; }
-.light-mode .success-message p { color: #1f2937; }
+.light-mode .form-input::placeholder { color: #6b21a8; }
+.light-mode select.form-input option, .light-mode select.form-input optgroup { background: #ffffff; color: #1e1b4b; }
+.light-mode .success-message h3 { color: #1e1b4b; }
+.light-mode .success-message p { color: #4c1d95; }
 
 /* === DARK MODE - ENHANCED NEON GAMING EFFECTS === */
 body:not(.light-mode) .zone-badge { 
