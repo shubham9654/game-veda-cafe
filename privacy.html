@@ -18,35 +18,7 @@
   <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
   <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <nav class="nav-inner">
-      <a href="index.html" class="logo">
-        <img data-field="logo-img" src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
-        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
-        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
-      </ul>
-      <div class="nav-right-actions">
-        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-          <i data-lucide="sun" class="sun-icon"></i>
-          <i data-lucide="moon" class="moon-icon"></i>
-        </button>
-        <a href="book.html" class="btn-primary nav-cta">Book Now</a>
-        <button id="menuBtn" class="hamburger" aria-label="Open menu"><i data-lucide="menu"></i></button>
-      </div>
-    </nav>
-    <div id="mobileMenu" class="mobile-menu hidden">
-      <a class="mobile-link" href="index.html">Home</a>
-      <a class="mobile-link" href="index.html#zones">Zones</a>
-      <a class="mobile-link" href="index.html#pricing">Pricing</a>
-      <a class="mobile-link" href="index.html#membership">Membership</a>
-      <a class="mobile-link" href="book.html">Book Now</a>
-    </div>
-  </header>
+  <div id="header-component"></div>
 
   <!-- HERO -->
   <div class="static-hero">
@@ -141,23 +113,9 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="footer-bottom">
-      <div class="container footer-bar">
-        <div class="footer-brand-mini">
-          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
-          <div>GAME <span>VEDA</span></div>
-        </div>
-        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved. |
-          <a href="contact.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Contact</a>
-          <a href="faqs.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">FAQs</a>
-          <a href="terms.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Terms</a>
-        </p>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-component"></div>
 
+  <script src="./src/js/components.js" defer></script>
   <script src="./src/js/site-data.js" defer></script>
   <script src="./src/js/main.js" defer></script>
   <script>
