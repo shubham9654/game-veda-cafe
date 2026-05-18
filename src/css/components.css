@@ -302,17 +302,32 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
 /* === LIGHT MODE OVERRIDES - VIBRANT PURPLE + GOLD === */
 .light-mode .zone-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
 .light-mode .zone-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .zone-card h3 { color: #fff0e6; }
+.light-mode .zone-card h3 { color: #ffffff; }
 .light-mode .zone-card p { color: #fde68a; }
+
 .light-mode .price-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
 .light-mode .price-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .price-amt { color: #fff0e6; }
+.light-mode .price-head h3 { color: #ffffff; }
+.light-mode .price-amt { color: #ffffff; }
 .light-mode .price-dur { color: #fde68a; }
+.light-mode .price-tag { color: #fde68a; }
+.light-mode .price-note { color: #fde68a; }
+
 .light-mode .member-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
 .light-mode .member-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .member-price { color: #fff0e6; }
+.light-mode .member-head h3 { color: #ffffff; }
+.light-mode .member-price { color: #ffffff; }
+.light-mode .member-hours { background: rgba(251, 146, 60, 0.2); color: #fff; border-color: rgba(251, 146, 60, 0.4); }
 .light-mode .member-features li { color: #fde68a; }
+
+.light-mode .vibe-brand { color: #ffffff; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6); }
+.light-mode .vibe-mood { color: #fde68a; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6); }
+
 .light-mode .panel, .light-mode .testimonial { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
+.light-mode .reviews-title { color: #ffffff; }
+.light-mode .reviews-count { color: #fcd34d; }
+.light-mode .reviews-count span { color: #fde68a; }
+.light-mode .reviewer-top strong { color: #ffffff; }
 .light-mode .testimonial p { color: #fde68a; }
 .light-mode .footer-label { color: #fbbf24; }
 .light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #fde68a; }
