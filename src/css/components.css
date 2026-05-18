@@ -256,6 +256,49 @@ select.form-input option, select.form-input optgroup { background: #0f172a; colo
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* === FOOTER LOGO IMAGE === */
+.footer-logo-img { width: 80px; height: 80px; object-fit: contain; display: block; margin-bottom: .5rem; filter: drop-shadow(0 0 8px rgba(168,85,247,.4)); }
+.footer-mini-logo { width: 28px; height: 28px; object-fit: contain; display: inline-block; vertical-align: middle; margin-right: .35rem; filter: drop-shadow(0 0 4px rgba(168,85,247,.5)); }
+.footer-logo-wrap { display: flex; align-items: center; gap: .6rem; margin-bottom: .6rem; }
+
+/* === STATIC PAGE STYLES (Contact, FAQs, Terms, Privacy) === */
+.static-page { min-height: 100vh; }
+.static-hero { padding: 5rem 0 2.5rem; text-align: center; }
+.static-hero .page-tag { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .15em; color: #fb923c; border: 1px solid rgba(251,146,60,.3); border-radius: 99px; padding: .25rem .8rem; margin-bottom: 1rem; }
+.static-hero h1 { font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; background: linear-gradient(90deg, #f472b6, #c084fc, #fbbf24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.static-hero p { color: #94a3b8; max-width: 520px; margin: .75rem auto 0; font-size: .95rem; }
+.static-content { padding: 2rem 0 4rem; }
+.static-content .container { max-width: 780px; }
+.static-card { background: linear-gradient(180deg, rgba(30,41,59,.9), rgba(15,23,42,.95)); border: 1px solid rgba(148,163,184,.12); border-radius: 1rem; padding: 2rem; margin-bottom: 1.5rem; }
+.static-card h2 { font-size: 1.1rem; font-weight: 700; color: #fb923c; margin-bottom: .75rem; display: flex; align-items: center; gap: .5rem; }
+.static-card h2 svg { width: 18px; height: 18px; }
+.static-card p, .static-card li { color: #94a3b8; line-height: 1.75; font-size: .9rem; }
+.static-card ul { list-style: none; padding: 0; }
+.static-card ul li { display: flex; align-items: flex-start; gap: .5rem; padding: .3rem 0; }
+.static-card ul li::before { content: '▸'; color: #fb923c; flex-shrink: 0; margin-top: .1rem; }
+.static-card a { color: #c084fc; text-decoration: underline; }
+.static-card a:hover { color: #fb923c; }
+.faq-item { border-bottom: 1px solid rgba(148,163,184,.1); padding: .8rem 0; }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { font-weight: 600; color: #e2e8f0; margin-bottom: .35rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-a { color: #94a3b8; font-size: .88rem; line-height: 1.7; display: none; }
+.faq-a.open { display: block; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-info-item { display: flex; align-items: flex-start; gap: .75rem; padding: .75rem 0; border-bottom: 1px solid rgba(148,163,184,.1); }
+.contact-info-item:last-child { border-bottom: none; }
+.contact-info-item svg { color: #fb923c; flex-shrink: 0; margin-top: .1rem; width: 18px; height: 18px; }
+.contact-info-item strong { display: block; color: #e2e8f0; font-size: .85rem; margin-bottom: .15rem; }
+.contact-info-item span, .contact-info-item a { color: #94a3b8; font-size: .88rem; }
+.contact-info-item a:hover { color: #fb923c; }
+.contact-form-wrap { display: flex; flex-direction: column; gap: .75rem; }
+.btn-contact-submit { width: 100%; background: linear-gradient(90deg, #9333ea, #fb923c); color: #fff; border: none; padding: .8rem 1.5rem; border-radius: .5rem; font-weight: 700; font-size: .9rem; cursor: pointer; transition: opacity .2s; }
+.btn-contact-submit:hover { opacity: .85; }
+.light-mode .static-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251,191,36,.25); }
+.light-mode .static-card h2 { color: #fbbf24; }
+.light-mode .static-card p, .light-mode .static-card li { color: #fde68a; }
+.light-mode .faq-q { color: #fff0e6; }
+
 /* === LIGHT MODE OVERRIDES - VIBRANT PURPLE + GOLD === */
 .light-mode .zone-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
 .light-mode .zone-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }

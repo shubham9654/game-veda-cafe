@@ -31,7 +31,6 @@
       <a href="index.html" class="logo">
         <img src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
       </a>
-      </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#zones" class="nav-link">Zones</a></li>
@@ -114,18 +113,24 @@
               <select id="package" class="form-input" required>
                 <option value="" disabled selected>Choose a package</option>
                 <optgroup label="Membership Plans">
-                  <option value="mem-platinum">Platinum Plan - 100 Hours (₹3299)</option>
-                  <option value="mem-gold">Gold Plan - 60 Hours (₹2599)</option>
-                  <option value="mem-silver">Silver Plan - 30 Hours (₹1499)</option>
+                  <option value="mem-platinum">Platinum Plan &ndash; 180h (₹3,299)</option>
+                  <option value="mem-gold">Gold Plan &ndash; 120h (₹2,599)</option>
+                  <option value="mem-silver">Silver Plan &ndash; 60h (₹1,499)</option>
                 </optgroup>
                 <optgroup label="PlayStation">
-                  <option value="ps-1hr">PlayStation - 1 Hr (₹160)</option>
-                  <option value="ps-2hr">PlayStation - 2 Hrs (₹280)</option>
-                  <option value="ps-4hr">PlayStation - 4 Hrs (₹500)</option>
+                  <option value="ps-1">PlayStation &ndash; 1 Hr (₹160)</option>
+                  <option value="ps-2">PlayStation &ndash; 2 Hrs (₹280)</option>
+                  <option value="ps-3">PlayStation &ndash; 4 Hrs (₹500)</option>
                 </optgroup>
                 <optgroup label="VR Experience">
-                  <option value="vr-30min">VR - 30 Min (₹350)</option>
-                  <option value="vr-1hr">VR - 1 Hr (₹600)</option>
+                  <option value="vr-1">VR &ndash; 45 Min (₹229)</option>
+                  <option value="vr-2">VR &ndash; 90 Min (₹499)</option>
+                  <option value="vr-3">VR &ndash; 135 Min (₹949)</option>
+                </optgroup>
+                <optgroup label="Combo Deals">
+                  <option value="combo-1">VR 45 Min + Drink (₹299)</option>
+                  <option value="combo-2">PS 2Hrs + VR 45 Min (₹449)</option>
+                  <option value="combo-3">VR 90 Min + Food (₹599)</option>
                 </optgroup>
               </select>
             </div>
@@ -155,15 +160,14 @@
         <div class="footer-col">
           <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
           <div class="footer-logo-wrap">
-            <span class="logo-icon sm-logo"><i data-lucide="triangle" class="logo-tri sm-tri"></i></span>
-            <div class="footer-logo-text">GAME<br><span>VEDA</span></div>
+            <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda Logo" class="footer-logo-img" />
           </div>
           <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp; create memories.</p>
           <ul class="footer-contact-list">
-            <li><i data-lucide="map-pin"></i> Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</li>
-            <li><i data-lucide="phone"></i> +91 85959 24912</li>
-            <li><i data-lucide="mail"></i> hello@gameveda.in</li>
-            <li><i data-lucide="clock"></i> Mon - Sun : 11:00 AM - 11:00 PM</li>
+            <li><i data-lucide="map-pin"></i> <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span></li>
+            <li><i data-lucide="phone"></i> <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a></li>
+            <li><i data-lucide="mail"></i> <span data-field="email">hello@gameveda.in</span></li>
+            <li><i data-lucide="clock"></i> <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span></li>
           </ul>
         </div>
 
@@ -183,14 +187,15 @@
     <div class="footer-bottom">
       <div class="container footer-bar">
         <div class="footer-brand-mini">
-          <span class="logo-icon xs-logo"><i data-lucide="triangle" class="logo-tri xs-tri"></i></span>
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
           <div>GAME <span>VEDA</span></div>
         </div>
-        <p>© <span id="year"></span> Game Veda. All rights reserved.</p>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <script src="./src/js/site-data.js" defer></script>
   <script src="./src/js/main.js" defer></script>
   <script src="./src/js/book.js" defer></script>
   <script>
