@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       // Construct WhatsApp message
-      const businessNumber = '918595924912';
+      const businessNumber = '919625329672';
       let message = `Hello! I want to book a slot at Game Veda\n\n`;
       message += `📝 *Booking Details:*\n`;
       message += `Name: ${fullName}\n`;
