@@ -71,3 +71,18 @@ if (tiltCard && !reducedMotion) {
   tiltCard.addEventListener("mousemove", onMove);
   tiltCard.addEventListener("mouseleave", resetTilt);
 }
+
+// Hero Image Slider
+const heroSlider = document.getElementById('heroSlider');
+if (heroSlider) {
+  const slides = heroSlider.querySelectorAll('.slide');
+  let currentSlide = 0;
+  
+  if (slides.length > 1) {
+    setInterval(() => {
+      slides[currentSlide].classList.remove('slide-active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('slide-active');
+    }, 3500);
+  }
+}
