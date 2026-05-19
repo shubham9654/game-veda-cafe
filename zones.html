@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore all gaming zones at Game Veda - PlayStation, VR, Café, Wheel Simulator, PC Gaming & Premium Lounge in Palam, New Delhi." />
+  <title>Our Zones | Game Veda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <script>
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background grid -->
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <a href="book.html" class="btn-primary nav-cta">Book Now</a>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="index.html">Home</a>
+      <a class="mobile-link" href="index.html#zones">Zones</a>
+      <a class="mobile-link" href="index.html#pricing">Pricing</a>
+      <a class="mobile-link" href="index.html#membership">Membership</a>
+      <a class="mobile-link" href="index.html#gallery">Gallery</a>
+    </div>
+  </header>
+
+  <!-- ==================== ZONES HERO ==================== -->
+  <section class="static-hero">
+    <div class="container">
+      <span class="page-tag"><i data-lucide="gamepad-2" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i> EXPLORE</span>
+      <h1>OUR ZONES</h1>
+      <p>From console gaming to immersive VR, discover every experience Game Veda has to offer.</p>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: PLAYSTATION ==================== -->
+  <section id="playstation" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-ps"></div>
+          <div class="zone-detail-badge">
+            <i data-lucide="gamepad-2"></i>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <h2 class="zone-detail-title">PLAYSTATION ZONE</h2>
+          <p class="zone-detail-desc">
+            Dive into next-gen gaming on the PS5 with stunning 55" 4K UHD displays and premium recliner seating. Whether you're battling it out in FIFA, exploring open worlds in God of War, or racing in Gran Turismo — our PlayStation zone delivers the ultimate console experience.
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> PS5 consoles with DualSense controllers</li>
+            <li><i data-lucide="check-circle"></i> 55" 4K UHD HDR displays</li>
+            <li><i data-lucide="check-circle"></i> Premium recliner seating</li>
+            <li><i data-lucide="check-circle"></i> 200+ game library</li>
+            <li><i data-lucide="check-circle"></i> Multiplayer & co-op ready</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="book.html?package=ps-2" class="btn-primary"><i data-lucide="calendar-check"></i> Book a Slot</a>
+            <a href="index.html#pricing" class="btn-outline">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: VR ==================== -->
+  <section id="vr" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card reverse reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-vr"></div>
+          <div class="zone-detail-badge purple">
+            <i data-lucide="glasses"></i>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <h2 class="zone-detail-title">VR ZONE</h2>
+          <p class="zone-detail-desc">
+            Step into another reality with our cutting-edge VR setups. Experience heart-pounding adventures, explore alien worlds, or fight zombies in fully immersive 360° environments. Our VR zone is perfect for first-timers and VR veterans alike.
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> Meta Quest & high-end VR headsets</li>
+            <li><i data-lucide="check-circle"></i> Full 360° room-scale tracking</li>
+            <li><i data-lucide="check-circle"></i> 50+ curated VR experiences</li>
+            <li><i data-lucide="check-circle"></i> Dedicated play area per station</li>
+            <li><i data-lucide="check-circle"></i> Staff-assisted setup & guidance</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="book.html?package=vr-1" class="btn-primary"><i data-lucide="calendar-check"></i> Book a Slot</a>
+            <a href="index.html#pricing" class="btn-outline">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: CAFÉ ==================== -->
+  <section id="cafe" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-cafe"></div>
+          <div class="zone-detail-badge orange">
+            <i data-lucide="utensils"></i>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <h2 class="zone-detail-title">CAFÉ &amp; FOOD</h2>
+          <p class="zone-detail-desc">
+            Fuel your gaming sessions with delicious food and refreshing drinks. From loaded fries and burgers to fresh shakes and cold coffees — our café menu is designed to keep you energised and in the zone. Eat, drink, and game on!
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> Burgers, wraps & loaded fries</li>
+            <li><i data-lucide="check-circle"></i> Fresh shakes & cold coffee</li>
+            <li><i data-lucide="check-circle"></i> Quick service to your gaming station</li>
+            <li><i data-lucide="check-circle"></i> Combo deals with gaming packages</li>
+            <li><i data-lucide="check-circle"></i> Cozy café seating area</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="book.html?package=combo-1" class="btn-primary"><i data-lucide="package"></i> View Combos</a>
+            <a href="index.html#pricing" class="btn-outline">View Pricing</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: WHEEL SIMULATOR (Coming Soon) ==================== -->
+  <section id="wheel-simulator" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card reverse coming-soon-card reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-wheel"></div>
+          <div class="zone-detail-badge pink">
+            <i data-lucide="car-front"></i>
+          </div>
+          <div class="coming-soon-overlay">
+            <span class="coming-soon-tag"><i data-lucide="clock"></i> COMING SOON</span>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <span class="zone-coming-soon-pill"><i data-lucide="rocket"></i> Launching Soon</span>
+          <h2 class="zone-detail-title">WHEEL SIMULATOR</h2>
+          <p class="zone-detail-desc">
+            Get behind the wheel of ultra-realistic racing simulators with immersive force feedback. Feel every turn, brake, and acceleration as you race across legendary circuits. The ultimate experience for motorsport fans.
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> Professional-grade racing wheels</li>
+            <li><i data-lucide="check-circle"></i> Force-feedback pedals & shifters</li>
+            <li><i data-lucide="check-circle"></i> Triple-monitor immersive setup</li>
+            <li><i data-lucide="check-circle"></i> F1, GT & rally racing experiences</li>
+            <li><i data-lucide="check-circle"></i> Multiplayer race nights</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="https://wa.me/919717689596?text=Hi!%20I'm%20interested%20in%20the%20Wheel%20Simulator%20zone.%20Please%20notify%20me%20when%20it%20launches!" class="btn-primary" target="_blank"><i data-lucide="bell"></i> Notify Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: PC GAMING (Coming Soon) ==================== -->
+  <section id="pc-gaming" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card coming-soon-card reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-pc"></div>
+          <div class="zone-detail-badge blue">
+            <i data-lucide="monitor"></i>
+          </div>
+          <div class="coming-soon-overlay">
+            <span class="coming-soon-tag"><i data-lucide="clock"></i> COMING SOON</span>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <span class="zone-coming-soon-pill"><i data-lucide="rocket"></i> Launching Soon</span>
+          <h2 class="zone-detail-title">PC GAMING</h2>
+          <p class="zone-detail-desc">
+            High-end PC gaming setups built for competitive gaming and e-sports. From Valorant and CS2 to Fortnite and League of Legends — dominate the leaderboard with top-tier hardware and buttery-smooth frame rates.
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> RTX 4070+ gaming rigs</li>
+            <li><i data-lucide="check-circle"></i> 240Hz gaming monitors</li>
+            <li><i data-lucide="check-circle"></i> Mechanical keyboards & pro mice</li>
+            <li><i data-lucide="check-circle"></i> High-speed fibre internet</li>
+            <li><i data-lucide="check-circle"></i> Tournament-ready stations</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="https://wa.me/919717689596?text=Hi!%20I'm%20interested%20in%20the%20PC%20Gaming%20zone.%20Please%20notify%20me%20when%20it%20launches!" class="btn-primary" target="_blank"><i data-lucide="bell"></i> Notify Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE: PREMIUM LOUNGE (Coming Soon) ==================== -->
+  <section id="premium-lounge" class="zone-detail-section">
+    <div class="container">
+      <div class="zone-detail-card reverse coming-soon-card reveal">
+        <div class="zone-detail-media">
+          <div class="zone-detail-img image-lounge"></div>
+          <div class="zone-detail-badge gold">
+            <i data-lucide="crown"></i>
+          </div>
+          <div class="coming-soon-overlay">
+            <span class="coming-soon-tag"><i data-lucide="clock"></i> COMING SOON</span>
+          </div>
+        </div>
+        <div class="zone-detail-content">
+          <span class="zone-coming-soon-pill"><i data-lucide="rocket"></i> Launching Soon</span>
+          <h2 class="zone-detail-title">PREMIUM LOUNGE</h2>
+          <p class="zone-detail-desc">
+            An exclusive VIP gaming experience for those who want the very best. Private rooms, premium refreshments, priority booking, and dedicated staff — the Premium Lounge is designed for a luxurious and uninterrupted gaming session.
+          </p>
+          <ul class="zone-detail-features">
+            <li><i data-lucide="check-circle"></i> Private VIP gaming rooms</li>
+            <li><i data-lucide="check-circle"></i> Premium refreshments included</li>
+            <li><i data-lucide="check-circle"></i> Dedicated gaming concierge</li>
+            <li><i data-lucide="check-circle"></i> All-access zone pass</li>
+            <li><i data-lucide="check-circle"></i> Birthday & party packages</li>
+          </ul>
+          <div class="zone-detail-actions">
+            <a href="https://wa.me/919717689596?text=Hi!%20I'm%20interested%20in%20the%20Premium%20Lounge.%20Please%20notify%20me%20when%20it%20launches!" class="btn-primary" target="_blank"><i data-lucide="bell"></i> Notify Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ZONE GALLERY ==================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> THE EXPERIENCE <span class="dash"></span></h2>
+      <div class="zone-gallery-grid reveal">
+        <div class="zg-item zg-tall">
+          <div class="zg-img image-ps"></div>
+          <div class="zg-label">PlayStation Zone</div>
+        </div>
+        <div class="zg-item">
+          <div class="zg-img image-vr"></div>
+          <div class="zg-label">VR Zone</div>
+        </div>
+        <div class="zg-item">
+          <div class="zg-img image-cafe"></div>
+          <div class="zg-label">Café & Food</div>
+        </div>
+        <div class="zg-item zg-wide">
+          <div class="zg-img" style="background: url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=800&h=400&fit=crop') center/cover no-repeat;"></div>
+          <div class="zg-label">The Vibe</div>
+        </div>
+        <div class="zg-item">
+          <div class="zg-img image-wheel"></div>
+          <div class="zg-label">Wheel Sim <span class="zg-soon">Soon</span></div>
+        </div>
+        <div class="zg-item zg-tall">
+          <div class="zg-img image-pc"></div>
+          <div class="zg-label">PC Gaming <span class="zg-soon">Soon</span></div>
+        </div>
+        <div class="zg-item">
+          <div class="zg-img image-lounge"></div>
+          <div class="zg-label">Premium Lounge <span class="zg-soon">Soon</span></div>
+        </div>
+        <div class="zg-item">
+          <div class="zg-img" style="background: url('https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=400&fit=crop') center/cover no-repeat;"></div>
+          <div class="zg-label">Game On</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BANNER ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="zone-cta-banner reveal">
+        <div class="zone-cta-content">
+          <h2>READY TO PLAY?</h2>
+          <p>Book your slot now and experience the ultimate gaming café in Delhi.</p>
+        </div>
+        <div class="zone-cta-actions">
+          <a href="book.html" class="btn-primary"><i data-lucide="calendar-check"></i> Book Your Slot</a>
+          <a href="https://wa.me/919717689596?text=Hi!%20I%20want%20to%20book%20a%20slot%20at%20Game%20Veda!" class="btn-whatsapp" target="_blank"><i data-lucide="message-circle"></i> WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid book-footer-grid">
+
+        <!-- Visit Us -->
+        <div class="footer-col">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda Logo" class="footer-logo-img" />
+          </div>
+          <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp; create memories.</p>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span></li>
+            <li><i data-lucide="phone"></i> <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a></li>
+            <li><i data-lucide="mail"></i> <span data-field="email">hello@gameveda.in</span></li>
+            <li><i data-lucide="clock"></i> <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span></li>
+          </ul>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-col map-col">
+          <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4663509644447!2d77.0895165!3d28.585783300000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b001996f733%3A0xa77437414f1985a2!2sPalam%20ram%20Chowk!5e0!3m2!1sen!2sin!4v1777666616676!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/site-data.js" defer></script>
+  <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+
+      // Smooth scroll to hash on load
+      if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 300);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
