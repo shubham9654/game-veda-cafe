@@ -435,3 +435,56 @@ body:not(.light-mode) .form-input:focus {
   * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ====== Animated Shimmering Border for Nav CTA ====== */
+.site-header .nav-cta {
+  position: relative;
+  overflow: hidden;
+  background: #0f172a;
+  z-index: 1;
+  border-radius: 0.6rem;
+  border: none !important;
+}
+
+.site-header .nav-cta::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent 70%, #f97316 85%, #a855f7 100%);
+  animation: spinBorder 2.5s linear infinite;
+  z-index: -2;
+}
+
+.site-header .nav-cta::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(135deg, #1e1b4b, #3b0764);
+  border-radius: calc(0.6rem - 2px);
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.site-header .nav-cta:hover::after {
+  background: linear-gradient(135deg, #2e1065, #4c1d95);
+}
+
+@keyframes spinBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+body.light-mode .site-header .nav-cta::after {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+}
+
+body.light-mode .site-header .nav-cta:hover::after {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+}
+
+body.light-mode .site-header .nav-cta {
+  color: #1e293b !important;
+}
