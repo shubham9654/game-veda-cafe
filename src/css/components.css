@@ -12,9 +12,9 @@
 .image-cafe { background: url('../images/zones/cafe.jpg') center/cover no-repeat; }
 
 /* Coming Soon Placeholders */
-.image-wheel { background: linear-gradient(45deg, #1e1b4b, #3b0764) center/cover; opacity: 0.7; }
-.image-pc { background: linear-gradient(45deg, #0f172a, #1e1b4b) center/cover; opacity: 0.7; }
-.image-lounge { background: linear-gradient(45deg, #450a0a, #3b0764) center/cover; opacity: 0.7; }
+.image-wheel { background: url('../images/zones/wheel.png') center/cover no-repeat; }
+.image-pc { background: url('../images/zones/pc.png') center/cover no-repeat; }
+.image-lounge { background: url('../images/zones/lounge.png') center/cover no-repeat; }
 
 .coming-soon-badge {
   position: absolute;
