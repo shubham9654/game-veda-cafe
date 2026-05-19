@@ -436,8 +436,8 @@ body:not(.light-mode) .form-input:focus {
   .reveal { opacity: 1; transform: none; }
 }
 
-/* ====== Animated Shimmering Border for Buttons ====== */
-.site-header .nav-cta, .hero-actions .btn-primary {
+/* ====== Animated Shimmering Border for Nav CTA ====== */
+.site-header .nav-cta {
   position: relative;
   overflow: hidden;
   background: #0f172a;
@@ -446,7 +446,7 @@ body:not(.light-mode) .form-input:focus {
   border: none !important;
 }
 
-.site-header .nav-cta::before, .hero-actions .btn-primary::before {
+.site-header .nav-cta::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -458,7 +458,7 @@ body:not(.light-mode) .form-input:focus {
   z-index: -2;
 }
 
-.site-header .nav-cta::after, .hero-actions .btn-primary::after {
+.site-header .nav-cta::after {
   content: "";
   position: absolute;
   inset: 2px;
@@ -468,7 +468,7 @@ body:not(.light-mode) .form-input:focus {
   transition: background 0.3s ease;
 }
 
-.site-header .nav-cta:hover::after, .hero-actions .btn-primary:hover::after {
+.site-header .nav-cta:hover::after {
   background: linear-gradient(135deg, #2e1065, #4c1d95);
 }
 
@@ -477,14 +477,14 @@ body:not(.light-mode) .form-input:focus {
   100% { transform: rotate(360deg); }
 }
 
-body.light-mode .site-header .nav-cta::after, body.light-mode .hero-actions .btn-primary::after {
+body.light-mode .site-header .nav-cta::after {
   background: linear-gradient(135deg, #f8fafc, #f1f5f9);
 }
 
-body.light-mode .site-header .nav-cta:hover::after, body.light-mode .hero-actions .btn-primary:hover::after {
+body.light-mode .site-header .nav-cta:hover::after {
   background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
 }
 
-body.light-mode .site-header .nav-cta, body.light-mode .hero-actions .btn-primary {
+body.light-mode .site-header .nav-cta {
   color: #1e293b !important;
 }
