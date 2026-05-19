@@ -10,6 +10,27 @@
 .image-vr { background: url('../images/zones/vr.jpg') center/cover no-repeat; }
 .image-pool { background: url('../images/zones/pool.jpg') center/cover no-repeat; }
 .image-cafe { background: url('../images/zones/cafe.jpg') center/cover no-repeat; }
+
+/* Coming Soon Placeholders */
+.image-wheel { background: linear-gradient(45deg, #1e1b4b, #3b0764) center/cover; opacity: 0.7; }
+.image-pc { background: linear-gradient(45deg, #0f172a, #1e1b4b) center/cover; opacity: 0.7; }
+.image-lounge { background: linear-gradient(45deg, #450a0a, #3b0764) center/cover; opacity: 0.7; }
+
+.coming-soon-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #ef4444;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);
+}
+
 .zone-badge { position: absolute; top: 1.2rem; right: 1.2rem; width: 32px; height: 32px; border-radius: 50%; background: rgba(251,146,60,.15); color: #fb923c; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); border: 1px solid rgba(251,146,60,.25); z-index: 2; }
 .zone-badge i, .zone-badge svg { width: 16px; height: 16px; }
 .zone-badge.purple { background: rgba(168,85,247,.15); color: #a855f7; border-color: rgba(168,85,247,.25); }
