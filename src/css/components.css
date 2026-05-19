@@ -717,3 +717,34 @@ body.light-mode .site-header .nav-cta:hover::after {
 body.light-mode .site-header .nav-cta {
   color: #1e293b !important;
 }
+
+/* ====== Animated Shimmering Border for Hero Book Button (Mobile Only) ====== */
+@media (max-width: 768px) {
+  .hero-book-btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: none !important;
+  }
+  
+  .hero-book-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 70%, #ffffff 85%, #fde68a 100%);
+    animation: spinBorder 2s linear infinite;
+    z-index: -2;
+  }
+  
+  .hero-book-btn::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: linear-gradient(135deg, #a855f7, #f97316);
+    border-radius: calc(0.6rem - 2px);
+    z-index: -1;
+  }
+}
