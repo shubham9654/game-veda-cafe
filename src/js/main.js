@@ -148,3 +148,45 @@ if (reviewsSlider && window.REVIEWS_DATA) {
     });
   }
 }
+
+// Pricing Card Option Selection
+const selectors = document.querySelectorAll('.price-selector');
+const buttons = document.querySelectorAll('.price-btn');
+
+selectors.forEach(selector => {
+  selector.addEventListener('change', (e) => {
+    const zone = selector.dataset.zone;
+    const selectedValue = e.target.value;
+    const button = document.querySelector(`.price-btn[data-zone="${zone}"]`);
+    const card = selector.closest('.price-card');
+    const priceRows = card.querySelectorAll('.price-row');
+    
+    // Remove all highlights
+    priceRows.forEach(row => row.classList.remove('highlight-row'));
+    
+    if (selectedValue) {
+      button.disabled = false;
+      button.title = 'Click to book';
+      button.dataset.package = selectedValue;
+      
+      // Highlight selected row
+      const selectedIndex = parseInt(selectedValue.split('-')[1]) - 1;
+      if (priceRows[selectedIndex]) {
+        priceRows[selectedIndex].classList.add('highlight-row');
+      }
+    } else {
+      button.disabled = true;
+      button.title = 'Select an option first';
+      delete button.dataset.package;
+    }
+  });
+});
+
+buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    if (!button.disabled && button.dataset.package) {
+      e.preventDefault();
+      window.location.href = `book.html?package=${button.dataset.package}`;
+    }
+  });
+});

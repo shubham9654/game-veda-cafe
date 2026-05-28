@@ -10,29 +10,28 @@
     "phoneRaw": "919717689596",
     "whatsapp": "919717689596",
     "email": "hello@gameveda.in",
-    "address": "Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045",
+    "address": "2nd Floor, RZ 12/2, Puran Nagar Gali, opposite Metro Station-Palam, above Rajmandir HyperMarket, Palam Colony, Raj Nagar I, Raj Nagar, Delhi, 110077",
     "hours": "Mon - Sun : 11:00 AM - 11:00 PM"
   },
   "social": {
-    "instagram": "https://instagram.com/gameveda",
+    "instagram": "https://www.instagram.com/gamevedacafe/",
     "facebook": "https://facebook.com/gameveda",
     "youtube": "https://youtube.com/@gameveda"
   },
   "pricing": {
-    "playstation": [
-      { "label": "1 Hr",  "price": 160, "tag": "Basic",       "popular": false, "best": false },
-      { "label": "2 Hrs", "price": 280, "tag": "Most Popular", "popular": true,  "best": false },
-      { "label": "4 Hrs", "price": 500, "tag": "Best Value",   "popular": false, "best": true }
-    ],
+    
     "vr": [
-      { "label": "45 Min",  "price": 229 },
-      { "label": "90 Min",  "price": 499 },
-      { "label": "135 Min", "price": 949 }
+      { "label": "40 Min",  "price": 229, "popular": false, "best": false },
+      { "label": "80 Min",  "price": 449, "popular": true,  "best": false  },
+      { "label": "120 Min", "price": 949, "popular": false, "best": true }
     ],
-    "combos": [
-      { "label": "VR 45 Min + Drink",       "price": 299, "tag": "Great Deal",   "popular": false, "best": false },
-      { "label": "VR 90 Min + Food",         "price": 599, "tag": "Best Value",   "popular": false, "best": true  },
-      { "label": "PS 2Hrs + VR 45 Min",      "price": 449, "tag": "Most Popular", "popular": true,  "best": false }
+    "playstation": [
+      { "label": "1 Player 1 Hr",  "price": 159, "tag": "Basic",       "popular": false, "best": false },
+      { "label": "2 Players 1 Hr", "price": 299, "tag": "Most Popular", "popular": true,  "best": false }
+    ],
+    "8 ball pool": [
+      { "label": "1 hour",       "price": 249, "tag": "Great Deal",   "popular": false, "best": false },
+      { "label": "Combo",      "price": 449, "tag": "Most Popular", "popular": true,  "best": false }
     ]
   },
   "membership": [

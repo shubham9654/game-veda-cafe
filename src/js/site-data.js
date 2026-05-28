@@ -90,14 +90,14 @@
     });
     sel.appendChild(vrGroup);
 
-    // Combo group
-    const comboGroup = document.createElement('optgroup');
-    comboGroup.label = 'Combo Deals';
-    d.pricing.combos.forEach((c, i) => {
-      const o = new Option(`${c.label} (₹${c.price})`, `combo-${i + 1}`);
-      comboGroup.appendChild(o);
+    // 8 Ball Pool group
+    const poolGroup = document.createElement('optgroup');
+    poolGroup.label = '8 Ball Pool';
+    d.pricing['8 ball pool'].forEach((p, i) => {
+      const o = new Option(`8 Ball Pool – ${p.label} (₹${p.price})`, `pool-${i + 1}`);
+      poolGroup.appendChild(o);
     });
-    sel.appendChild(comboGroup);
+    sel.appendChild(poolGroup);
 
     // Restore selected value from URL param
     const params = new URLSearchParams(window.location.search);
