@@ -169,6 +169,20 @@
   box-shadow: 0 8px 30px rgba(168, 85, 247, .15);
 }
 
+/* Colored variants for pricing cards */
+.price-card.purple {
+  border-color: rgba(168, 85, 247, .22);
+  box-shadow: 0 10px 40px rgba(168,85,247,0.06);
+}
+.price-card.blue {
+  border-color: rgba(59, 130, 246, .18);
+  box-shadow: 0 10px 40px rgba(59,130,246,0.04);
+}
+.price-card.gold {
+  border-color: rgba(251, 191, 36, .18);
+  box-shadow: 0 10px 40px rgba(251,191,36,0.04);
+}
+
 .price-head {
   display: flex;
   align-items: center;
@@ -232,6 +246,19 @@
 .highlight-row {
   background: rgba(251, 146, 60, .06);
   border: 1px solid rgba(251, 146, 60, .12);
+}
+
+.price-card.purple .highlight-row {
+  background: rgba(168, 85, 247, .06);
+  border-color: rgba(168, 85, 247, .12);
+}
+.price-card.blue .highlight-row {
+  background: rgba(59, 130, 246, .06);
+  border-color: rgba(59, 130, 246, .12);
+}
+.price-card.gold .highlight-row {
+  background: rgba(251, 191, 36, .06);
+  border-color: rgba(251, 191, 36, .12);
 }
 
 .gold-row {

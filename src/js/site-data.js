@@ -110,6 +110,194 @@
   // Let book.js use d.contact.whatsapp
   window.__siteData = d;
 
+  /* ── Dynamic Pricing & Membership Rendering ────── */
+  function renderPricing() {
+    const grid = document.querySelector('.pricing-grid');
+    if (!grid) return;
+
+    // Clear existing static content
+    grid.innerHTML = '';
+
+    // Helper to create a price card
+    function createCard(title, iconName, zoneKey, zoneAttr, colorClass) {
+      const article = document.createElement('article');
+      article.className = 'price-card reveal';
+      if (colorClass) article.classList.add(colorClass);
+
+      const head = document.createElement('div');
+      head.className = 'price-head';
+      head.innerHTML = `<span class="price-icon ${colorClass || ''}"><i data-lucide="${iconName}"></i></span><h3>${title}</h3>`;
+      article.appendChild(head);
+
+      const rows = document.createElement('div');
+      rows.className = 'price-rows';
+
+      (d.pricing[zoneKey] || []).forEach((p, idx) => {
+        const row = document.createElement('div');
+        row.className = 'price-row';
+        row.dataset.index = idx;
+
+        const amt = document.createElement('span');
+        amt.className = 'price-amt';
+        amt.textContent = `₹${p.price}`;
+        row.appendChild(amt);
+
+        const dur = document.createElement('span');
+        dur.className = 'price-dur';
+        dur.textContent = ` / ${p.label}`;
+        row.appendChild(dur);
+
+        if (p.tag) {
+          const tag = document.createElement('span');
+          tag.className = 'price-tag';
+          tag.textContent = p.tag.toUpperCase();
+          row.appendChild(tag);
+        }
+        if (p.popular) {
+          const pop = document.createElement('span');
+          pop.className = 'badge-popular';
+          pop.textContent = 'MOST POPULAR';
+          row.appendChild(pop);
+        }
+        if (p.best) {
+          const best = document.createElement('span');
+          best.className = 'badge-best';
+          best.textContent = 'BEST VALUE';
+          row.appendChild(best);
+        }
+
+        rows.appendChild(row);
+      });
+
+      article.appendChild(rows);
+
+      // Select
+      const sel = document.createElement('select');
+      sel.className = 'price-selector';
+      sel.dataset.zone = zoneAttr;
+      sel.innerHTML = '<option value="">Select an option</option>';
+      (d.pricing[zoneKey] || []).forEach((p, i) => {
+        const opt = document.createElement('option');
+        opt.value = `${zoneAttr}-${i + 1}`;
+        opt.textContent = `${p.label} - ₹${p.price}`;
+        sel.appendChild(opt);
+      });
+      article.appendChild(sel);
+
+      const btn = document.createElement('button');
+      btn.className = 'btn-price price-btn';
+      btn.disabled = true;
+      btn.dataset.zone = zoneAttr;
+      btn.title = 'Select an option first';
+      btn.textContent = zoneAttr === 'ps' ? 'PLAY NOW' : (zoneAttr === 'vr' ? 'EXPERIENCE NOW' : 'PLAY NOW');
+      if (colorClass) btn.classList.add(`${colorClass}-btn`);
+      article.appendChild(btn);
+
+      return article;
+    }
+
+    // Create VR, PlayStation and 8 Ball Pool in the order expected
+    grid.appendChild(createCard('VR EXPERIENCE', 'glasses', 'vr', 'vr', 'purple'));
+    const psCard = createCard('PLAYSTATION', 'gamepad-2', 'playstation', 'ps', 'blue');
+    psCard.classList.add('featured');
+    grid.appendChild(psCard);
+    grid.appendChild(createCard('8 BALL POOL', 'circle-dot', '8 ball pool', 'pool', 'gold'));
+
+    // Re-init lucide icons for new nodes
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  function renderMembership() {
+    const grid = document.querySelector('.membership-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+
+    d.membership.forEach(m => {
+      const art = document.createElement('article');
+      art.className = 'member-card reveal';
+      if (m.popular) art.classList.add('popular');
+
+      art.innerHTML = `
+        <div class="member-head">
+          <span class="member-icon ${m.tier}"><i data-lucide="${m.icon}"></i></span>
+          <div>
+            <h3>${m.name.toUpperCase()} ${m.popular ? '<span class="badge-popular">MOST POPULAR</span>' : ''}</h3>
+            <span class="member-price">₹${m.price}</span>
+          </div>
+        </div>
+        <p class="member-hours"><i data-lucide="clock"></i> ${m.hours} Hours Playtime</p>
+        <ul class="member-features">
+          ${m.features.map(f => `<li><i data-lucide="check"></i> ${f}</li>`).join('')}
+        </ul>
+        <a href="book.html?package=${m.id}" class="btn-member ${m.popular ? (m.tier === 'purple' ? 'purple-member-btn' : 'gold-member-btn') : ''}">GET ${m.name.toUpperCase()}</a>
+      `;
+
+      grid.appendChild(art);
+    });
+
+    if (window.lucide) window.lucide.createIcons();
+  }
+
+  // Render dynamic sections
+  renderPricing();
+  renderMembership();
+
+  /* ── Ensure reveal animations and price bindings ── */
+  // Force-show any newly added reveal elements (covers cases where observer wasn't attached)
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('show'));
+
+  // Initialize price selector/button behavior if main.js didn't run after rendering
+  function initPriceBindings() {
+    const selectors = document.querySelectorAll('.price-selector');
+    if (!selectors.length) return;
+
+    selectors.forEach(selector => {
+      if (selector.dataset.inited) return;
+      selector.dataset.inited = '1';
+      selector.addEventListener('change', (e) => {
+        const zone = selector.dataset.zone;
+        const selectedValue = e.target.value;
+        const button = document.querySelector(`.price-btn[data-zone="${zone}"]`);
+        const card = selector.closest('.price-card');
+        const priceRows = card ? card.querySelectorAll('.price-row') : [];
+
+        priceRows.forEach(row => row.classList.remove('highlight-row'));
+
+        if (selectedValue) {
+          if (button) {
+            button.disabled = false;
+            button.title = 'Click to book';
+            button.dataset.package = selectedValue;
+          }
+
+          const selectedIndex = parseInt(selectedValue.split('-')[1]) - 1;
+          if (priceRows[selectedIndex]) priceRows[selectedIndex].classList.add('highlight-row');
+        } else {
+          if (button) {
+            button.disabled = true;
+            button.title = 'Select an option first';
+            delete button.dataset.package;
+          }
+        }
+      });
+    });
+
+    // Buttons
+    const buttons = document.querySelectorAll('.price-btn');
+    buttons.forEach(btn => {
+      if (btn.dataset.inited) return;
+      btn.dataset.inited = '1';
+      btn.addEventListener('click', (e) => {
+        if (!btn.disabled && btn.dataset.package) {
+          e.preventDefault();
+          window.location.href = `book.html?package=${btn.dataset.package}`;
+        }
+      });
+    });
+  }
+
+  initPriceBindings();
+
   /* ── Copyright year ─────────────────────────────── */
   document.querySelectorAll('#year, [data-field="year"]').forEach(el => {
     el.textContent = new Date().getFullYear();

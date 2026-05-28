@@ -19,19 +19,19 @@
     "youtube": "https://youtube.com/@gameveda"
   },
   "pricing": {
-    
     "vr": [
       { "label": "40 Min",  "price": 229, "popular": false, "best": false },
       { "label": "80 Min",  "price": 449, "popular": true,  "best": false  },
-      { "label": "120 Min", "price": 949, "popular": false, "best": true }
+      { "label": "120 Min", "price": 949, "popular": false, "best": false }
     ],
     "playstation": [
       { "label": "1 Player 1 Hr",  "price": 159, "tag": "Basic",       "popular": false, "best": false },
-      { "label": "2 Players 1 Hr", "price": 299, "tag": "Most Popular", "popular": true,  "best": false }
+      { "label": "2 Players 1 Hr", "price": 299, "tag": "", "popular": true,  "best": false },
+      { "label": "1 Players 3 Hr", "price": 499, "tag": "", "popular": false,  "best": true }
     ],
     "8 ball pool": [
-      { "label": "1 hour",       "price": 249, "tag": "Great Deal",   "popular": false, "best": false },
-      { "label": "Combo",      "price": 449, "tag": "Most Popular", "popular": true,  "best": false }
+      { "label": "1 hour",       "price": 249, "tag": "Basic",   "popular": false, "best": false },
+      { "label": "Combo",      "price": 449, "tag": "", "popular": true,  "best": false }
     ]
   },
   "membership": [
