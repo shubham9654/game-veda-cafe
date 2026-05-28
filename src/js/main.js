@@ -102,3 +102,49 @@ if (header) {
   // Check on initial load
   handleScroll();
 }
+
+// Reviews slider dynamic rendering and scroll buttons
+const reviewsSlider = document.getElementById('reviewsSlider');
+const reviewPrev = document.getElementById('reviewPrev');
+const reviewNext = document.getElementById('reviewNext');
+
+if (reviewsSlider && window.REVIEWS_DATA) {
+  // Render reviews from JS data
+  window.REVIEWS_DATA.forEach((review, index) => {
+    const article = document.createElement('article');
+    article.className = 'testimonial reveal';
+    article.style.animationDelay = `${index * 0.1}s`;
+    
+    article.innerHTML = `
+      <div class="reviewer-top">
+        <span class="avatar-big" style="background:${review.avatar}"></span>
+        <div>
+          <strong>${review.name}</strong>
+          <div class="stars-row sm">
+            ${'<i data-lucide="star" class="star-filled"></i>'.repeat(review.rating)}
+          </div>
+        </div>
+      </div>
+      <p>"${review.text}"</p>
+    `;
+    reviewsSlider.appendChild(article);
+    if (typeof revealObserver !== 'undefined') {
+      revealObserver.observe(article);
+    }
+  });
+  
+  // Re-initialize lucide icons for the newly added icons
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+
+  if (reviewPrev && reviewNext) {
+    const scrollAmount = 320;
+    reviewPrev.addEventListener('click', () => {
+      reviewsSlider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+    reviewNext.addEventListener('click', () => {
+      reviewsSlider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+  }
+}
