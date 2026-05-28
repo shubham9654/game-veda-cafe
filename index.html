@@ -21,9 +21,7 @@
     }
   </script>
 
-  <!-- Background grid -->
-  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
-  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+  <!-- Background elements removed to integrate seamlessly with the banner -->
 
   <!-- ==================== HEADER ==================== -->
   <header class="site-header">
@@ -66,11 +64,30 @@
 
   <!-- ==================== HERO ==================== -->
   <section id="home" class="hero-section">
-    <div class="container">
-      <div class="hero-grid-layout">
+    <!-- Full-screen Background Slider -->
+    <div class="hero-slider-bg" id="heroSlider">
+      <div class="slide slide-active" style="background-image: url('./src/images/hero/banner.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/playstation.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/vr.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/cafe.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/wheel.png')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/lounge.png')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/pc.png')"></div>
+      <div class="hero-particles">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay-dark"></div>
+    <div class="hero-overlay-bottom"></div>
+
+    <div class="container h-full flex flex-col justify-center relative z-10">
+      <div class="hero-bottom-row">
         <!-- Left column -->
         <div class="hero-content">
-          <span class="pill"><i data-lucide="star" class="pill-icon"></i> Welcome to Game Veda</span>
+          <div class="w-max">
+            <span class="pill"><i data-lucide="star" class="pill-icon"></i> Welcome to Game Veda</span>
+          </div>
           <h1 class="hero-title">
             INDIA'S ULTIMATE<br>
             <span class="gradient-text">GAMING CAFÉ</span>
@@ -80,40 +97,30 @@
             Pool Tables &nbsp;•&nbsp; Café &amp; More
           </p>
           <div class="hero-actions">
-            <a href="book.html" class="btn-primary hero-book-btn"><i data-lucide="gamepad-2"></i> Book Your Slot</a>
+            <a href="book.html" class="btn-primary hero-book-btn"><i data-lucide="user"></i> Book Your Slot</a>
             <a href="#pricing" class="btn-outline">View Pricing</a>
           </div>
-          <p class="hero-location"><i data-lucide="map-pin"></i>&nbsp; Palam, New Delhi</p>
+          <p class="hero-location"><i data-lucide="map-pin"></i> Palam, New Delhi</p>
         </div>
 
-        <!-- Right column -->
-        <div class="hero-visual tilt-card" id="tiltCard">
-          <div class="hero-image" id="heroSlider">
-            <div class="slide slide-active" style="background-image: url('./src/images/hero/banner.jpg')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/playstation.jpg')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/vr.jpg')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/cafe.jpg')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/wheel.png')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/lounge.png')"></div>
-            <div class="slide" style="background-image: url('./src/images/zones/detail/pc.png')"></div>
-            <img src="./src/images/logo.png" alt="Game Veda Logo" class="relative z-10 w-48 drop-shadow-2xl" />
-            <div class="hero-particles">
-              <span></span><span></span><span></span><span></span>
-            </div>
+        <!-- Right column / Stats at bottom right -->
+        <div class="hero-stat mt-8 lg:mt-0 self-end lg:self-end">
+          <div class="stat-avatars">
+            <span class="avatar" style="background-image:url('https://ui-avatars.com/api/?name=Rohan+Mehta&background=a855f7&color=fff&size=100'); background-size: cover;"></span>
+            <span class="avatar" style="background-image:url('https://ui-avatars.com/api/?name=Ankit+Sharma&background=22c55e&color=fff&size=100'); background-size: cover;"></span>
+            <span class="avatar" style="background-image:url('https://ui-avatars.com/api/?name=Karan+Singh&background=fbbf24&color=fff&size=100'); background-size: cover;"></span>
           </div>
-          <div class="hero-stat">
-            <div class="stat-avatars">
-              <span class="avatar"></span><span class="avatar"></span><span class="avatar"></span>
-            </div>
-            <div>
-              <strong>1000+</strong> Happy Gamers<br>
-              <span class="stat-sub">and Counting!</span>
-            </div>
+          <div>
+            <strong>1000+</strong> Happy Gamers<br>
+            <span class="stat-sub">and Counting!</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Feature chips -->
+  <div class="container relative z-10">
+    <!-- Feature chips -->
       <div class="features-row">
         <div class="feature-chip reveal">
           <span class="fchip-icon purple !flex"><i data-lucide="monitor"></i></span>
@@ -145,8 +152,6 @@
         </div>
       </div>
     </div>
-  </section>
-
   <!-- ==================== OUR ZONES ==================== -->
   <section id="zones" class="section">
     <div class="container">

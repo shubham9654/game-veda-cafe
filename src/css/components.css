@@ -549,57 +549,54 @@ body:not(.light-mode) .zone-detail-badge { box-shadow: 0 0 12px currentColor; }
 .light-mode .static-card p, .light-mode .static-card li { color: #fde68a; }
 .light-mode .faq-q { color: #fff0e6; }
 
-/* === LIGHT MODE OVERRIDES - VIBRANT PURPLE + GOLD === */
-.light-mode .zone-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
-.light-mode .zone-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .zone-card h3 { color: #ffffff; }
-.light-mode .zone-card p { color: #fde68a; }
+/* === LIGHT MODE OVERRIDES - PREMIUM GLASSMORPHISM THEME === */
+.light-mode .zone-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(255, 255, 255, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+.light-mode .zone-card:hover { border-color: rgba(147, 51, 234, 0.5); box-shadow: 0 15px 35px rgba(147, 51, 234, 0.12); transform: translateY(-4px); background: rgba(255, 255, 255, 0.85); }
+.light-mode .zone-card h3 { color: #0f172a; }
+.light-mode .zone-card p { color: #475569; }
 
-.light-mode .price-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
-.light-mode .price-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .price-head h3 { color: #ffffff; }
-.light-mode .price-amt { color: #ffffff; }
-.light-mode .price-dur { color: #fde68a; }
-.light-mode .price-tag { color: #fde68a; }
-.light-mode .price-note { color: #fde68a; }
+.light-mode .price-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(255, 255, 255, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+.light-mode .price-card:hover { border-color: rgba(147, 51, 234, 0.5); box-shadow: 0 15px 35px rgba(147, 51, 234, 0.12); transform: translateY(-3px); background: rgba(255, 255, 255, 0.85); }
+.light-mode .price-head h3 { color: #0f172a; }
+.light-mode .price-amt { color: #0f172a; }
+.light-mode .price-dur { color: #64748b; }
+.light-mode .price-tag { color: #64748b; }
+.light-mode .price-note { color: #64748b; }
 
-.light-mode .member-card { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
-.light-mode .member-card:hover { border-color: rgba(251, 191, 36, 0.7); box-shadow: 0 0 25px rgba(251, 191, 36, 0.25); }
-.light-mode .member-head h3 { color: #ffffff; }
-.light-mode .member-price { color: #ffffff; }
-.light-mode .member-hours { background: rgba(251, 146, 60, 0.2); color: #fff; border-color: rgba(251, 146, 60, 0.4); }
-.light-mode .member-features li { color: #fde68a; }
+.light-mode .member-card { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(255, 255, 255, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+.light-mode .member-card:hover { border-color: rgba(147, 51, 234, 0.5); box-shadow: 0 15px 35px rgba(147, 51, 234, 0.12); transform: translateY(-3px); background: rgba(255, 255, 255, 0.85); }
+.light-mode .member-head h3 { color: #0f172a; }
+.light-mode .member-price { color: #0f172a; }
+.light-mode .member-hours { background: rgba(249, 115, 22, 0.12); color: #ea580c; border-color: rgba(249, 115, 22, 0.3); }
+.light-mode .member-features li { color: #475569; }
 
-.light-mode .vibe-brand { color: #ffffff; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6); }
-.light-mode .vibe-mood { color: #fde68a; text-shadow: 0 0 12px rgba(251, 191, 36, 0.6); }
-
-.light-mode .panel, .light-mode .testimonial { background: linear-gradient(180deg, rgba(60,30,120,.65), rgba(30,58,95,.7)); border-color: rgba(251, 191, 36, 0.3); box-shadow: 0 0 15px rgba(168, 85, 247, 0.15); }
-.light-mode .reviews-title { color: #ffffff; }
-.light-mode .reviews-count { color: #fcd34d; }
-.light-mode .reviews-count span { color: #fde68a; }
-.light-mode .reviewer-top strong { color: #ffffff; }
-.light-mode .testimonial p { color: #fde68a; }
-.light-mode .footer-label { color: #fbbf24; }
-.light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #fde68a; }
-.light-mode .social-btn { color: #fde68a; border-color: rgba(251, 191, 36, 0.35); }
-.light-mode .social-btn:hover { background: rgba(251, 191, 36, 0.18); color: #fff; border-color: rgba(251, 191, 36, 0.6); }
-.light-mode .map-box { background: rgba(45,27,105,.7); border-color: rgba(251, 191, 36, 0.35); }
-.light-mode .map-box iframe { filter: invert(90%) hue-rotate(180deg) contrast(85%) opacity(0.8); }
-.light-mode .map-box:hover iframe { filter: invert(90%) hue-rotate(180deg) contrast(100%) opacity(1); }
-.light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(251, 191, 36, 0.25); background: rgba(45,27,105,.5); }
-.light-mode .btn-price, .light-mode .btn-member { color: #fde68a; border-color: rgba(251, 191, 36, 0.35); }
-.light-mode .btn-price:hover, .light-mode .btn-member:hover { background: rgba(251, 191, 36, 0.15); color: #fff; border-color: rgba(251, 191, 36, 0.6); }
+.light-mode .panel, .light-mode .testimonial { background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-color: rgba(255, 255, 255, 0.9); box-shadow: 0 10px 30px rgba(0,0,0,0.03), inset 0 0 0 1px rgba(255, 255, 255, 0.5); }
+.light-mode .reviews-title { color: #0f172a; }
+.light-mode .reviews-count { color: #ea580c; }
+.light-mode .reviews-count span { color: #64748b; }
+.light-mode .reviewer-top strong { color: #0f172a; }
+.light-mode .testimonial p { color: #475569; }
+.light-mode .footer-label { color: #9333ea; font-weight: 800; }
+.light-mode .footer-sub, .light-mode .footer-contact-list li, .light-mode .footer-links a, .light-mode .footer-ready-sub, .light-mode .footer-bar p { color: #475569; }
+.light-mode .social-btn { color: #475569; border-color: rgba(203, 213, 225, 0.9); background: rgba(255,255,255,0.5); backdrop-filter: blur(4px); }
+.light-mode .social-btn:hover { background: rgba(147, 51, 234, 0.1); color: #9333ea; border-color: rgba(147, 51, 234, 0.5); }
+.light-mode .map-box { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border-color: rgba(255, 255, 255, 0.9); padding: 0.25rem; }
+.light-mode .map-box iframe { filter: none; border-radius: 0.6rem; }
+.light-mode .map-box:hover iframe { filter: none; }
+.light-mode .site-footer, .light-mode .footer-bottom { border-top-color: rgba(255, 255, 255, 0.5); background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(16px); }
+.light-mode .btn-price, .light-mode .btn-member { color: #0f172a; border-color: rgba(203, 213, 225, 0.9); background: rgba(255,255,255,0.4); }
+.light-mode .btn-price:hover, .light-mode .btn-member:hover { background: rgba(147, 51, 234, 0.1); color: #9333ea; border-color: rgba(147, 51, 234, 0.5); }
 
 /* Light mode for Booking Form */
-.light-mode .booking-subtext { color: #fde68a; }
-.light-mode .booking-card { background: linear-gradient(180deg, rgba(60,30,120,.75), rgba(30,58,95,.8)); border-color: rgba(251, 191, 36, 0.35); box-shadow: 0 20px 40px rgba(0,0,0,.3), 0 0 30px rgba(168,85,247,.15); }
-.light-mode .form-group label { color: #fde68a; }
-.light-mode .form-input { background: rgba(45,27,105,.55); border-color: rgba(251, 191, 36, 0.35); color: #fff0e6; }
-.light-mode .form-input:focus { background: rgba(45,27,105,.8); border-color: rgba(251, 191, 36, 0.8); box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.15), 0 0 15px rgba(251, 191, 36, 0.1); }
-.light-mode .form-input::placeholder { color: rgba(253,230,138,0.5); }
-.light-mode select.form-input option, .light-mode select.form-input optgroup { background: #2d1b69; color: #fff0e6; }
-.light-mode .success-message h3 { color: #fff0e6; }
-.light-mode .success-message p { color: #fde68a; }
+.light-mode .booking-subtext { color: #475569; }
+.light-mode .booking-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); border-color: rgba(255, 255, 255, 0.9); box-shadow: 0 20px 40px rgba(0,0,0,0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.6); }
+.light-mode .form-group label { color: #334155; }
+.light-mode .form-input { background: rgba(255, 255, 255, 0.6); border-color: rgba(203, 213, 225, 0.9); color: #0f172a; backdrop-filter: blur(8px); }
+.light-mode .form-input:focus { background: rgba(255, 255, 255, 0.95); border-color: rgba(147, 51, 234, 0.6); box-shadow: 0 0 0 4px rgba(147, 51, 234, 0.12); }
+.light-mode .form-input::placeholder { color: #94a3b8; }
+.light-mode select.form-input option, .light-mode select.form-input optgroup { background: #ffffff; color: #0f172a; }
+.light-mode .success-message h3 { color: #0f172a; }
+.light-mode .success-message p { color: #475569; }
 
 /* === DARK MODE - ENHANCED NEON GAMING EFFECTS === */
 body:not(.light-mode) .zone-badge { 
