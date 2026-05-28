@@ -139,7 +139,7 @@
 
         const amt = document.createElement('span');
         amt.className = 'price-amt';
-        amt.textContent = `₹${p.price}`;
+        amt.textContent = `₹${p.price}*`;
         row.appendChild(amt);
 
         const dur = document.createElement('span');
@@ -179,7 +179,7 @@
       (d.pricing[zoneKey] || []).forEach((p, i) => {
         const opt = document.createElement('option');
         opt.value = `${zoneAttr}-${i + 1}`;
-        opt.textContent = `${p.label} - ₹${p.price}`;
+        opt.textContent = `${p.label} - ₹${p.price}*`;
         sel.appendChild(opt);
       });
       article.appendChild(sel);
