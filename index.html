@@ -97,14 +97,20 @@
             <span class="gradient-text">GAMING CAFÉ</span>
           </h1>
           <p class="hero-sub">
-            Next-Gen Gaming &nbsp;•&nbsp; Immersive VR<br>
-            Pool Tables &nbsp;•&nbsp; Café &amp; More
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)] font-bold text-base sm:text-lg md:text-xl tracking-wide animate-pulse inline-block">
+              Happy Hours Mon to Friday, 11am to 4pm
+            </span>
           </p>
           <div class="hero-actions">
             <a href="book.html" class="btn-primary hero-book-btn"><i data-lucide="user"></i> Book Your Slot</a>
             <a href="#pricing" class="btn-outline">View Pricing</a>
           </div>
-          <p class="hero-location"><i data-lucide="map-pin"></i> Palam, New Delhi</p>
+          <a href="https://maps.google.com/?q=Game+Veda,+Palam,+New+Delhi" target="_blank" rel="noopener noreferrer"
+            class="hero-location hover:text-purple-400 transition-colors inline-block text-white flex"
+            style="text-decoration: none;">
+            <i data-lucide="map-pin"></i> Palam, New Delhi
+          </a>
         </div>
 
         <!-- Right column / Stats at bottom right -->
@@ -178,6 +184,33 @@
             <div class="zone-badge purple"><i data-lucide="glasses"></i></div>
             <h3>VR ZONE</h3>
             <p>Step into another world with our high-end VR setups &amp; immersive games.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#pool" class="zone-card-link">
+          <article class="zone-card reveal delay-2">
+            <div class="zone-image image-pool"></div>
+            <div class="zone-badge gold"><i data-lucide="circle-dot"></i></div>
+            <h3>8 BALL POOL</h3>
+            <p>Enjoy a classic game of 8 ball pool with your friends on our premium tables.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#hockey" class="zone-card-link">
+          <article class="zone-card reveal delay-3">
+            <div class="zone-image image-hockey"></div>
+            <div class="zone-badge blue"><i data-lucide="zap"></i></div>
+            <h3>HOCKEY</h3>
+            <p>Challenge your friends to a fast-paced, exciting game of air hockey.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#table-tennis" class="zone-card-link">
+          <article class="zone-card reveal delay-4">
+            <div class="zone-image image-tt"></div>
+            <div class="zone-badge green"><i data-lucide="circle"></i></div>
+            <h3>TABLE TENNIS</h3>
+            <p>Show off your ping pong skills with our professional grade tables.</p>
           </article>
         </a>
 
@@ -258,7 +291,8 @@
             <option value="vr-2">80 Min - ₹449</option>
             <option value="vr-3">120 Min - ₹949</option>
           </select>
-          <button class="btn-price purple-btn price-btn" disabled data-zone="vr" title="Select an option first">EXPERIENCE NOW</button>
+          <button class="btn-price purple-btn price-btn" disabled data-zone="vr"
+            title="Select an option first">EXPERIENCE NOW</button>
         </article>
 
         <!-- PlayStation (center - most popular plan) -->
@@ -284,7 +318,8 @@
             <option value="ps-1">1 Player 1 Hr - ₹159</option>
             <option value="ps-2">2 Players 1 Hr - ₹299</option>
           </select>
-          <button class="btn-price blue-btn price-btn" disabled data-zone="ps" title="Select an option first">PLAY NOW</button>
+          <button class="btn-price blue-btn price-btn" disabled data-zone="ps" title="Select an option first">PLAY
+            NOW</button>
         </article>
 
         <!-- 8 Ball Pool -->
@@ -310,7 +345,8 @@
             <option value="pool-1">1 Hour - ₹249</option>
             <option value="pool-2">Combo - ₹449</option>
           </select>
-          <button class="btn-price gold-btn price-btn" disabled data-zone="pool" title="Select an option first">PLAY NOW</button>
+          <button class="btn-price gold-btn price-btn" disabled data-zone="pool" title="Select an option first">PLAY
+            NOW</button>
         </article>
 
       </div>
@@ -464,7 +500,10 @@
         <!-- Map -->
         <div class="footer-col map-col reveal delay-1">
           <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
 
@@ -490,17 +529,20 @@
           <div class="footer-cta-btns">
             <a href="book.html" class="btn-primary footer-cta"><i data-lucide="calendar-check"></i> BOOK YOUR SLOT</a>
             <a data-field="whatsapp-link" data-msg="Hi, I want to book a slot at Game Veda!"
-              href="https://wa.me/919717689596" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> WHATSAPP
+              href="https://wa.me/919717689596" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i
+                data-lucide="message-circle"></i> WHATSAPP
               US</a>
           </div>
           <div class="footer-follow">
             <p class="footer-label">FOLLOW US</p>
             <div class="social-row">
-              <a data-field="instagram" href="https://www.instagram.com/gamevedacafe/" class="social-btn" target="_blank" rel="noopener noreferrer"
-                aria-label="Instagram">
+              <a data-field="instagram" href="https://www.instagram.com/gamevedacafe/" class="social-btn"
+                target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403.586.213 1.006.47 1.448.912.442.442.699.862.912 1.448.163.458.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427-.213.586-.47 1.006-.912 1.448-.442.442-.862.699-1.448.912-.458.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403-.586-.213-1.006-.47-1.448-.912-.442-.442-.699-.862-.912-1.448-.163-.458-.347-1.257-.403-2.427C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427.213-.586.47-1.006.912-1.448.442-.442.862-.699 1.448-.912.458-.163 1.257-.347 2.427-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.013 7.052.072 5.77.131 4.676.323 3.757.63 2.772.957 1.99 1.445 1.22 2.216.45 2.986-.038 3.769-.365 4.753c-.307.919-.499 2.013-.558 3.295C-.013 9.667 0 10.07 0 12c0 1.93.013 2.333.072 3.613.059 1.282.251 2.376.558 3.295.327.984.815 1.767 1.586 2.538.771.771 1.553 1.259 2.538 1.586.919.307 2.013.499 3.295.558 1.28.059 1.683.072 3.613.072s2.333-.013 3.613-.072c1.282-.059 2.376-.251 3.295-.558.984-.327 1.767-.815 2.538-1.586.771-.771 1.259-1.553 1.586-2.538.307-.919.499-2.013.558-3.295.059-1.28.072-1.683.072-3.613s-.013-2.333-.072-3.613c-.059-1.282-.251-2.376-.558-3.295C23.05 1.99 22.562 1.208 21.79.437 21.02-.333 20.238-.821 19.254-1.148c-.919-.307-2.013-.499-3.295-.558C14.333-.013 13.93 0 12 0z"/>
-                  <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403.586.213 1.006.47 1.448.912.442.442.699.862.912 1.448.163.458.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427-.213.586-.47 1.006-.912 1.448-.442.442-.862.699-1.448.912-.458.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403-.586-.213-1.006-.47-1.448-.912-.442-.442-.699-.862-.912-1.448-.163-.458-.347-1.257-.403-2.427C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427.213-.586.47-1.006.912-1.448.442-.442.862-.699 1.448-.912.458-.163 1.257-.347 2.427-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.013 7.052.072 5.77.131 4.676.323 3.757.63 2.772.957 1.99 1.445 1.22 2.216.45 2.986-.038 3.769-.365 4.753c-.307.919-.499 2.013-.558 3.295C-.013 9.667 0 10.07 0 12c0 1.93.013 2.333.072 3.613.059 1.282.251 2.376.558 3.295.327.984.815 1.767 1.586 2.538.771.771 1.553 1.259 2.538 1.586.919.307 2.013.499 3.295.558 1.28.059 1.683.072 3.613.072s2.333-.013 3.613-.072c1.282-.059 2.376-.251 3.295-.558.984-.327 1.767-.815 2.538-1.586.771-.771 1.259-1.553 1.586-2.538.307-.919.499-2.013.558-3.295.059-1.28.072-1.683.072-3.613s-.013-2.333-.072-3.613c-.059-1.282-.251-2.376-.558-3.295C23.05 1.99 22.562 1.208 21.79.437 21.02-.333 20.238-.821 19.254-1.148c-.919-.307-2.013-.499-3.295-.558C14.333-.013 13.93 0 12 0z" />
+                  <path
+                    d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
                 </svg>
               </a>
             </div>

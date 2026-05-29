@@ -64,6 +64,14 @@
   background: url('../images/zones/detail/pool.jpg') center/cover no-repeat;
 }
 
+.image-hockey {
+  background: url('../images/zones/detail/hockey.png') center/cover no-repeat;
+}
+
+.image-tt {
+  background: url('../images/zones/detail/tt.png') center/cover no-repeat;
+}
+
 .image-cafe {
   background: url('../images/zones/detail/cafe.jpg') center/cover no-repeat;
 }
