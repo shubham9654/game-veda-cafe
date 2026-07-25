@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Frequently Asked Questions about Game Veda – bookings, pricing, zones, memberships and more." />
+  <title>FAQs | Game Veda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <script>if (localStorage.getItem("theme") === "light") document.body.classList.add("light-mode");</script>
+</head>
+<body class="static-page">
+
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo">
+        <img data-field="logo-img" src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <a href="book.html" class="btn-primary nav-cta">Book Now</a>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="index.html">Home</a>
+      <a class="mobile-link" href="index.html#zones">Zones</a>
+      <a class="mobile-link" href="index.html#pricing">Pricing</a>
+      <a class="mobile-link" href="index.html#membership">Membership</a>
+      <a class="mobile-link" href="book.html">Book Now</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="static-hero">
+    <span class="page-tag">QUICK ANSWERS</span>
+    <h1>Frequently Asked Questions</h1>
+    <p>Everything you need to know before you come in and play. Can't find your answer? <a href="contact.html" style="color:#fb923c;">Contact us</a>.</p>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="static-content">
+    <div class="container">
+
+      <div class="static-card">
+        <h2><i data-lucide="calendar-check"></i> Bookings & Reservations</h2>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How do I book a slot at Game Veda? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">You can book online via our <a href="book.html">Book Now</a> page. Fill in your details and we'll send you a confirmation via WhatsApp. You can also call or WhatsApp us directly at <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a>.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is advance booking required? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">We recommend booking at least 1 day in advance, especially on weekends. Walk-ins are welcome subject to availability.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I cancel or reschedule my booking? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Yes! Please contact us at least 4 hours before your slot to cancel or reschedule. Contact us on WhatsApp at <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a>.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I book for a group or birthday party? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Absolutely! We love group bookings. Please call or WhatsApp us for group rates and special party packages.</div>
+        </div>
+      </div>
+
+      <div class="static-card">
+        <h2><i data-lucide="indian-rupee"></i> Pricing & Payments</h2>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What are the VR gaming prices? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">VR Experience: ₹229 for 45 Min, ₹499 for 90 Min, and ₹949 for 135 Min. We also have great combo deals starting at ₹299!</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What are the PlayStation pricing options? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">PlayStation pricing: ₹160 for 1 Hour, ₹280 for 2 Hours (Most Popular), and ₹500 for 4 Hours (Best Value).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What payment methods do you accept? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">We accept cash, UPI (Google Pay, PhonePe, Paytm), and all major debit/credit cards.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Are prices inclusive of taxes? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Yes, all displayed prices are inclusive of applicable taxes.</div>
+        </div>
+      </div>
+
+      <div class="static-card">
+        <h2><i data-lucide="trophy"></i> Membership Plans</h2>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What membership plans do you offer? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">We offer three plans — Silver (₹1,499 / 60h / 30 days), Gold (₹2,599 / 120h / 30 days), and Platinum (₹3,299 / 180h / 30 days). See our <a href="index.html#membership">Membership section</a> for full details.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can membership hours be carried forward? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">No, membership hours expire at the end of the validity period (30 days). We recommend choosing a plan that matches your gaming frequency.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I use my membership for VR as well? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Memberships provide access to all zones. However, VR sessions are charged separately due to equipment costs. Members get a discount on VR sessions.</div>
+        </div>
+      </div>
+
+      <div class="static-card">
+        <h2><i data-lucide="info"></i> General</h2>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What are your opening hours? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a"><span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span>. We are open all 7 days including public holidays!</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is there a minimum age requirement? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Children under 10 must be accompanied by an adult. VR sessions are recommended for ages 12 and above.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you have food and beverages? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a">Yes! Our Café Zone serves snacks, meals, and a variety of beverages to keep you energised during long gaming sessions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Where are you located? <i data-lucide="chevron-down"></i></div>
+          <div class="faq-a"><span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span>. Use <a href="contact.html">our map</a> for directions.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved. |
+          <a href="contact.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Contact</a>
+          <a href="terms.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Terms</a>
+          <a href="privacy.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Privacy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/site-data.js" defer></script>
+  <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () { lucide.createIcons(); });
+    function toggleFaq(el) {
+      const ans = el.nextElementSibling;
+      ans.classList.toggle('open');
+      const icon = el.querySelector('svg');
+      if (icon) icon.style.transform = ans.classList.contains('open') ? 'rotate(180deg)' : '';
+    }
+  </script>
+</body>
+</html>

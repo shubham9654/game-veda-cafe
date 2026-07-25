@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Game Veda - India's ultimate gaming cafe in Palam, New Delhi. PS5, VR, pool, cafe food, and memberships." />
+  <title>Game Veda | Ultimate Gaming Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+</head>
+
+<body>
+  <script>
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+    }
+  </script>
+
+  <!-- Background elements removed to integrate seamlessly with the banner -->
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="#home" class="logo">
+        <img src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#zones" class="nav-link">Zones</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#membership" class="nav-link">Membership</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <a href="book.html" class="btn-primary nav-cta">Book Now</a>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="#home">Home</a>
+      <a class="mobile-link" href="#about">About Us</a>
+      <a class="mobile-link" href="#zones">Zones</a>
+      <a class="mobile-link" href="#menu">Menu</a>
+      <a class="mobile-link" href="#pricing">Pricing</a>
+      <a class="mobile-link" href="#membership">Membership</a>
+      <a class="mobile-link" href="#gallery">Gallery</a>
+      <a class="mobile-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="home" class="hero-section">
+    <!-- Full-screen Background Slider -->
+    <div class="hero-slider-bg" id="heroSlider">
+      <div class="slide slide-active" style="background-image: url('./src/images/hero/banner.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/playstation.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/vr.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/cafe.jpg')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/wheel.png')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/lounge.png')"></div>
+      <div class="slide" style="background-image: url('./src/images/zones/detail/pc.png')"></div>
+      <div class="hero-particles">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay-dark"></div>
+    <div class="hero-overlay-bottom"></div>
+
+    <div class="container h-full flex flex-col justify-center relative z-10">
+      <div class="hero-bottom-row">
+        <!-- Left column -->
+        <div class="hero-content">
+          <div class="w-max">
+            <span class="pill"><i data-lucide="star" class="pill-icon"></i> Welcome to Game Veda</span>
+          </div>
+          <h1 class="hero-title">
+            INDIA'S ULTIMATE<br>
+            <span class="gradient-text">GAMING CAFÉ</span>
+          </h1>
+          <p class="hero-sub">
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)] font-bold text-base sm:text-lg md:text-xl tracking-wide animate-pulse inline-block">
+              Happy Hours Mon to Friday, 11am to 4pm
+            </span>
+          </p>
+          <div class="hero-actions">
+            <a href="book.html" class="btn-primary hero-book-btn"><i data-lucide="user"></i> Book Your Slot</a>
+            <a href="#pricing" class="btn-outline">View Pricing</a>
+          </div>
+          <a href="https://maps.google.com/?q=Game+Veda,+Palam,+New+Delhi" target="_blank" rel="noopener noreferrer"
+            class="hero-location hover:text-purple-400 transition-colors inline-block text-white flex"
+            style="text-decoration: none;">
+            <i data-lucide="map-pin"></i> Palam, New Delhi
+          </a>
+        </div>
+
+        <!-- Right column / Stats at bottom right -->
+        <div class="hero-stat mt-8 lg:mt-0 self-end lg:self-end">
+          <div class="stat-avatars">
+            <span class="avatar"
+              style="background-image:url('https://ui-avatars.com/api/?name=Rohan+Mehta&background=a855f7&color=fff&size=100'); background-size: cover;"></span>
+            <span class="avatar"
+              style="background-image:url('https://ui-avatars.com/api/?name=Ankit+Sharma&background=22c55e&color=fff&size=100'); background-size: cover;"></span>
+            <span class="avatar"
+              style="background-image:url('https://ui-avatars.com/api/?name=Karan+Singh&background=fbbf24&color=fff&size=100'); background-size: cover;"></span>
+          </div>
+          <div>
+            <strong>1000+</strong> Happy Gamers<br>
+            <span class="stat-sub">and Counting!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container relative z-10">
+    <!-- Feature chips -->
+    <div class="features-row">
+      <div class="feature-chip reveal">
+        <span class="fchip-icon purple !flex"><i data-lucide="monitor"></i></span>
+        <div>
+          <strong>Premium Setup</strong>
+          <span>High-end consoles &amp; immersive VR</span>
+        </div>
+      </div>
+      <div class="feature-chip reveal delay-1">
+        <span class="fchip-icon blue !flex"><i data-lucide="users"></i></span>
+        <div>
+          <strong>Multiplayer Friendly</strong>
+          <span>Perfect for friends, groups &amp; tournaments</span>
+        </div>
+      </div>
+      <div class="feature-chip reveal delay-2">
+        <span class="fchip-icon pink !flex"><i data-lucide="coffee"></i></span>
+        <div>
+          <strong>Café &amp; Food</strong>
+          <span>Delicious food &amp; drinks to power your game</span>
+        </div>
+      </div>
+      <div class="feature-chip reveal delay-3">
+        <span class="fchip-icon gold !flex"><i data-lucide="tag"></i></span>
+        <div>
+          <strong>Affordable Pricing</strong>
+          <span>Great prices for non-stop fun</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ==================== OUR ZONES ==================== -->
+  <section id="zones" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> OUR ZONES <span class="dash"></span></h2>
+      <div class="zones-grid">
+        <a href="zones.html#playstation" class="zone-card-link">
+          <article class="zone-card reveal">
+            <div class="zone-image image-ps"></div>
+            <div class="zone-badge"><i data-lucide="gamepad-2"></i></div>
+            <h3>PLAYSTATION ZONE</h3>
+            <p>Experience next-gen gaming on PS5 with 55" UHD screens &amp; recliner seating.</p>
+          </article>
+        </a>
+        <a href="zones.html#vr" class="zone-card-link">
+          <article class="zone-card reveal delay-1">
+            <div class="zone-image image-vr"></div>
+            <div class="zone-badge purple"><i data-lucide="glasses"></i></div>
+            <h3>VR ZONE</h3>
+            <p>Step into another world with our high-end VR setups &amp; immersive games.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#pool" class="zone-card-link">
+          <article class="zone-card reveal delay-2">
+            <div class="zone-image image-pool"></div>
+            <div class="zone-badge gold"><i data-lucide="circle-dot"></i></div>
+            <h3>8 BALL POOL</h3>
+            <p>Enjoy a classic game of 8 ball pool with your friends on our premium tables.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#hockey" class="zone-card-link">
+          <article class="zone-card reveal delay-3">
+            <div class="zone-image image-hockey"></div>
+            <div class="zone-badge blue"><i data-lucide="zap"></i></div>
+            <h3>HOCKEY</h3>
+            <p>Challenge your friends to a fast-paced, exciting game of air hockey.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#table-tennis" class="zone-card-link">
+          <article class="zone-card reveal delay-4">
+            <div class="zone-image image-tt"></div>
+            <div class="zone-badge green"><i data-lucide="circle"></i></div>
+            <h3>TABLE TENNIS</h3>
+            <p>Show off your ping pong skills with our professional grade tables.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#cafe" class="zone-card-link">
+          <article class="zone-card reveal delay-3">
+            <div class="zone-image image-cafe"></div>
+            <div class="zone-badge orange"><i data-lucide="utensils"></i></div>
+            <h3>CAFÉ &amp; FOOD</h3>
+            <p>From snacks to meals, we have everything to keep you energised.</p>
+          </article>
+        </a>
+
+        <!-- Coming Soon -->
+        <a href="zones.html#wheel-simulator" class="zone-card-link">
+          <article class="zone-card reveal delay-4" style="position: relative;">
+            <div class="coming-soon-badge">COMING SOON</div>
+            <div class="zone-image image-wheel"></div>
+            <div class="zone-badge pink"><i data-lucide="car-front"></i></div>
+            <h3>WHEEL SIMULATOR</h3>
+            <p>Ultra-realistic racing simulators with immersive force feedback.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#pc-gaming" class="zone-card-link">
+          <article class="zone-card reveal delay-5" style="position: relative;">
+            <div class="coming-soon-badge">COMING SOON</div>
+            <div class="zone-image image-pc"></div>
+            <div class="zone-badge blue"><i data-lucide="monitor"></i></div>
+            <h3>PC GAMING</h3>
+            <p>High-end setups for ultimate competitive gaming and e-sports.</p>
+          </article>
+        </a>
+
+        <a href="zones.html#premium-lounge" class="zone-card-link">
+          <article class="zone-card reveal delay-6" style="position: relative;">
+            <div class="coming-soon-badge">COMING SOON</div>
+            <div class="zone-image image-lounge"></div>
+            <div class="zone-badge gold"><i data-lucide="crown"></i></div>
+            <h3>PREMIUM LOUNGE</h3>
+            <p>Exclusive VIP areas for a private, luxurious gaming experience.</p>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GAME VEDA CAFE MENU ==================== -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> FOOD MENU <span class="dash"></span></h2>
+
+      <div class="menu-poster-grid">
+
+        <!-- ROW 1: MOMOS (left) + NOODLES (right) -->
+
+        <!-- MOMOS — Title top-left, image top-right overflowing, table full-width below -->
+        <article class="menu-card mc-momos reveal" data-category="momos">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--orange">MOMOS</h3>
+            <img src="./src/images/menu/momos.png" alt="Momos" class="mc-img mc-img--momos" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="3" class="th-group-half">HALF (6 PCS)</th>
+                  <th colspan="3" class="th-group-full">FULL (10 PCS)</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Steam Momos</td><td><span class="price-num">119</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td></tr>
+                <tr><td class="td-item">Fried Momos</td><td><span class="price-num">129</span></td><td><span class="price-num">159</span></td><td><span class="price-num">189</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Kurkure Momos</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Gravy Momos</td><td><span class="price-num">159</span></td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td></tr>
+                <tr><td class="td-item">Chilly Momos</td><td><span class="price-num">159</span></td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td></tr>
+                <tr><td class="td-item">Tangy Hot &amp; Spicy Momos</td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td><td><span class="price-num">249</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- NOODLES — Title top-left, image top-right, table below -->
+        <article class="menu-card mc-noodles reveal delay-1" data-category="noodles">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--cyan">NOODLES</h3>
+            <img src="./src/images/menu/noodles.png" alt="Noodles" class="mc-img mc-img--noodles" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="4" class="th-group-half">HALF</th>
+                  <th colspan="4" class="th-group-full">FULL</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Hakka Noodle</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Shezwan Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Singapori Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Chilly Garlic Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- ROW 2: FRIED RICE (left) + right column with SPRING ROLL stacked on CHILLY PATATO -->
+
+        <!-- FRIED RICE -->
+        <article class="menu-card mc-fried-rice reveal delay-2" data-category="fried-rice">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--green">FRIED RICE</h3>
+            <img src="./src/images/menu/fried_rice.png" alt="Fried Rice" class="mc-img mc-img--fried-rice" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="4" class="th-group-half">HALF</th>
+                  <th colspan="4" class="th-group-full">FULL</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Regular Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">179</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Shezwan Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">179</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Singapori Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">259</span></td></tr>
+                <tr><td class="td-item">Chilly Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">259</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- RIGHT COLUMN: Spring Roll on top, Chilly Patato below -->
+        <div class="mc-right-stack">
+
+          <!-- SPRING ROLL -->
+          <article class="menu-card mc-spring-roll reveal delay-3" data-category="spring-roll">
+            <div class="mc-head">
+              <h3 class="mc-title mc-title--pink">SPRING ROLL</h3>
+              <img src="./src/images/menu/spring_rolls.png" alt="Spring Rolls" class="mc-img mc-img--spring-roll" />
+            </div>
+            <div class="menu-table-wrapper">
+              <table class="menu-table">
+                <thead>
+                  <tr>
+                    <th class="th-item">ITEMS</th>
+                    <th class="th-group-half">HALF (4 PCS)</th>
+                    <th class="th-group-full">FULL (8 PCS)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="td-item">Krunchy Spring Roll</td><td><span class="price-num">119</span></td><td><span class="price-num">159</span></td></tr>
+                  <tr><td class="td-item">Veg Spring Roll</td><td><span class="price-num">99</span></td><td><span class="price-num">149</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- CHILLY PATATO -->
+          <article class="menu-card mc-chilly-potato reveal delay-4" data-category="chilly-potato">
+            <div class="mc-head">
+              <h3 class="mc-title mc-title--purple">CHILLY PATATO</h3>
+              <img src="./src/images/menu/chilly_potato.png" alt="Chilly Potato" class="mc-img mc-img--chilly-potato" />
+            </div>
+            <div class="menu-table-wrapper">
+              <table class="menu-table">
+                <thead>
+                  <tr>
+                    <th class="th-item">ITEMS</th>
+                    <th class="th-group-half">HALF</th>
+                    <th class="th-group-full">FULL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="td-item">Chilly Patato</td><td><span class="price-num">139</span></td><td><span class="price-num">179</span></td></tr>
+                  <tr><td class="td-item">Honey Chilly Patato</td><td><span class="price-num">179</span></td><td><span class="price-num">239</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+        </div><!-- end mc-right-stack -->
+
+        <!-- ROW 3: QUICK BITES (left) + FRENCH FRIES (right) -->
+
+        <!-- QUICK BITES — image on left side, title+table on right -->
+        <!-- QUICK BITES -->
+        <article class="menu-card mc-quick-bites reveal delay-5" data-category="quick-bites">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--yellow">QUICK BITES</h3>
+            <img src="./src/images/menu/quick_bites.png" alt="Quick Bites" class="mc-img mc-img--quick-bites" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th class="th-item">ITEMS</th>
+                  <th class="th-group-half">HALF</th>
+                  <th class="th-group-full">FULL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Veg Manchurian</td><td><span class="price-num">159</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Chilly Chicken</td><td><span class="price-num">179</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Lemon Chicken</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Chicken Manchurian</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Chilly Panner</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Paneer Manchurian</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- FRENCH FRIES — title top, image right, table left -->
+        <!-- FRENCH FRIES -->
+        <article class="menu-card mc-french-fries reveal delay-1" data-category="french-fries">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--orange-bright">FRENCH FRIES</h3>
+            <img src="./src/images/menu/french_fries.png" alt="French Fries" class="mc-img mc-img--french-fries" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th class="th-item">ITEMS</th>
+                  <th class="th-group-full">FULL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Regular Salted Fries</td><td><span class="price-num">139</span></td></tr>
+                <tr><td class="td-item">Peri Peri Fries 🌶️🌶️</td><td><span class="price-num">159</span></td></tr>
+              </tbody>
+            </table>
+            <div class="mc-addon-dip">
+              <span class="mc-addon-label">ADD ON DIP <span class="mc-addon-price">₹20</span></span>
+              <span class="mc-addon-items">Mayo | Schezwan | Cheese</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROW 4: OTHER ITEMS (left) + INFO PANEL (right) -->
+
+        <!-- OTHER ITEMS -->
+        <!-- OTHER ITEMS -->
+        <article class="menu-card mc-other-items reveal delay-2" data-category="fitness">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--blue">OTHER ITEMS <span class="mc-onmrp-badge">ON MRP</span></h3>
+            <img src="./src/images/menu/fitness_drinks.png" alt="Pre Workout" class="mc-img mc-img--fitness" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <tbody>
+                <tr><td class="td-item">Protein Shake</td><td><span class="price-num">169</span></td></tr>
+                <tr><td class="td-item">Preworkout</td><td><span class="price-num">79</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- INFO PANEL -->
+        <div class="mc-info-panel reveal delay-3">
+          <div class="mc-info-item">
+            <i data-lucide="thumbs-up" class="mc-info-icon mc-info-icon--blue"></i>
+            <span>ALL PRICES ARE INCLUSIVE OF TAXES</span>
+          </div>
+          <div class="mc-info-item hide-on-mobile">
+            <i data-lucide="leaf" class="mc-info-icon mc-info-icon--green"></i>
+            <span>FRESH INGREDIENTS. GREAT TASTE.</span>
+          </div>
+          <div class="mc-info-item hide-on-mobile">
+            <i data-lucide="heart" class="mc-info-icon mc-info-icon--red"></i>
+            <span>THANK YOU FOR SUPPORTING <span class="gradient-text">GAME VEDA</span>!</span>
+          </div>
+        </div>
+
+      </div><!-- end menu-poster-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ==================== PRICING & COMBOS ==================== -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> PRICING &amp; COMBOS <span class="dash"></span></h2>
+      <div class="pricing-grid">
+
+        <!-- VR Experience -->
+        <article class="price-card reveal">
+          <div class="price-head">
+            <span class="price-icon purple"><i data-lucide="glasses"></i></span>
+            <h3>VR EXPERIENCE</h3>
+          </div>
+          <div class="price-rows">
+            <div class="price-row" data-index="0">
+              <span class="price-amt">₹229</span>
+              <span class="price-dur">/ 40 Min</span>
+            </div>
+            <div class="price-row" data-index="1">
+              <span class="price-amt">₹449</span>
+              <span class="price-dur">/ 80 Min</span>
+              <span class="badge-popular">POPULAR</span>
+            </div>
+            <div class="price-row" data-index="2">
+              <span class="price-amt">₹949</span>
+              <span class="price-dur">/ 120 Min</span>
+              <span class="badge-best">BEST VALUE</span>
+            </div>
+          </div>
+          <select class="price-selector" data-zone="vr">
+            <option value="">Select an option</option>
+            <option value="vr-1">40 Min - ₹229</option>
+            <option value="vr-2">80 Min - ₹449</option>
+            <option value="vr-3">120 Min - ₹949</option>
+          </select>
+          <button class="btn-price purple-btn price-btn" disabled data-zone="vr"
+            title="Select an option first">EXPERIENCE NOW</button>
+        </article>
+
+        <!-- PlayStation (center - most popular plan) -->
+        <article class="price-card featured reveal delay-1">
+          <div class="price-head">
+            <span class="price-icon blue"><i data-lucide="gamepad-2"></i></span>
+            <h3>PLAYSTATION</h3>
+          </div>
+          <div class="price-rows">
+            <div class="price-row" data-index="0">
+              <span class="price-amt">₹159</span>
+              <span class="price-dur">/ 1 Player 1 Hr</span>
+              <span class="price-tag">Basic</span>
+            </div>
+            <div class="price-row" data-index="1">
+              <span class="price-amt">₹299</span>
+              <span class="price-dur">/ 2 Players 1 Hr</span>
+              <span class="badge-popular">MOST POPULAR</span>
+            </div>
+          </div>
+          <select class="price-selector" data-zone="ps">
+            <option value="">Select an option</option>
+            <option value="ps-1">1 Player 1 Hr - ₹159</option>
+            <option value="ps-2">2 Players 1 Hr - ₹299</option>
+          </select>
+          <button class="btn-price blue-btn price-btn" disabled data-zone="ps" title="Select an option first">PLAY
+            NOW</button>
+        </article>
+
+        <!-- 8 Ball Pool -->
+        <article class="price-card reveal delay-2">
+          <div class="price-head">
+            <span class="price-icon gold"><i data-lucide="circle-dot"></i></span>
+            <h3>8 BALL POOL</h3>
+          </div>
+          <div class="price-rows">
+            <div class="price-row" data-index="0">
+              <span class="price-amt">₹249</span>
+              <span class="price-dur">/ 1 Hour</span>
+              <span class="price-tag">Great Deal</span>
+            </div>
+            <div class="price-row" data-index="1">
+              <span class="price-amt">₹449</span>
+              <span class="price-dur">/ Combo</span>
+              <span class="badge-popular">MOST POPULAR</span>
+            </div>
+          </div>
+          <select class="price-selector" data-zone="pool">
+            <option value="">Select an option</option>
+            <option value="pool-1">1 Hour - ₹249</option>
+            <option value="pool-2">Combo - ₹449</option>
+          </select>
+          <button class="btn-price gold-btn price-btn" disabled data-zone="pool" title="Select an option first">PLAY
+            NOW</button>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <p class="price-note"><i data-lucide="info"></i>&nbsp; * All prices are inclusive of taxes.</p>
+
+
+  <!-- ==================== MEMBERSHIP PLANS ==================== -->
+  <section id="membership" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> MEMBERSHIP PLANS <span class="dash"></span></h2>
+      <div class="membership-grid">
+
+        <article class="member-card reveal">
+          <div class="member-head">
+            <span class="member-icon blue"><i data-lucide="shield"></i></span>
+            <div>
+              <h3>SILVER</h3>
+              <span class="member-price">₹1499</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 60 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 30 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Play 1 hour every day</li>
+            <li><i data-lucide="check"></i> Exciting Discounts</li>
+          </ul>
+          <a href="book.html?package=mem-silver" class="btn-member">GET SILVER</a>
+        </article>
+
+        <article class="member-card popular reveal delay-1">
+          <div class="member-head">
+            <span class="member-icon purple"><i data-lucide="shield-check"></i></span>
+            <div>
+              <h3>GOLD <span class="badge-popular">MOST POPULAR</span></h3>
+              <span class="member-price">₹2599</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 120 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 30 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Play 2 hours daily</li>
+            <li><i data-lucide="check"></i> Priority Booking</li>
+            <li><i data-lucide="check"></i> 10% Discount on Food</li>
+          </ul>
+          <a href="book.html?package=mem-gold" class="btn-member purple-member-btn">GET GOLD</a>
+        </article>
+
+        <article class="member-card elite reveal delay-2">
+          <div class="member-head">
+            <span class="member-icon gold"><i data-lucide="crown"></i></span>
+            <div>
+              <h3>PLATINUM</h3>
+              <span class="member-price">₹3299</span>
+            </div>
+          </div>
+          <p class="member-hours"><i data-lucide="clock"></i> 180 Hours Playtime</p>
+          <ul class="member-features">
+            <li><i data-lucide="check"></i> Valid for 30 Days</li>
+            <li><i data-lucide="check"></i> All Zones Access</li>
+            <li><i data-lucide="check"></i> Play 3 hours daily</li>
+            <li><i data-lucide="check"></i> Priority Booking</li>
+            <li><i data-lucide="check"></i> 15% Discount on Food</li>
+            <li><i data-lucide="check"></i> Exclusive Offers</li>
+          </ul>
+          <a href="book.html?package=mem-platinum" class="btn-member gold-member-btn">GET PLATINUM</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== THE VIBE (Gallery) ==================== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> THE VIBE <span class="dash"></span></h2>
+      <div class="vibe-grid reveal">
+        <div class="vibe-item v1"></div>
+        <div class="vibe-item v2"></div>
+        <div class="vibe-item v3 vibe-label">
+          <div class="vibe-brand">GAME<br>VEDA</div>
+        </div>
+        <div class="vibe-item v4"></div>
+        <div class="vibe-item v5 vibe-label2">
+          <div class="vibe-mood">GOOD<br>FOOD<br>MOOD</div>
+        </div>
+        <div class="vibe-item v6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section">
+    <div class="container">
+      <!-- Header Row -->
+      <h2 class="section-title text-center reveal"><span class="dash"></span> WHAT GAMERS SAY <span class="dash"></span>
+      </h2>
+      <div class="reviews-header reveal delay-1">
+        <div class="reviews-summary">
+          <div class="stars-row">
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+            <i data-lucide="star" class="star-filled"></i>
+          </div>
+          <p class="reviews-count">5.0/5 <span>(30+ Reviews on Google)</span></p>
+        </div>
+        <div class="reviews-scroll-btns !hidden md:!flex">
+          <button class="review-scroll-btn" id="reviewPrev" aria-label="Previous reviews"><i
+              data-lucide="chevron-left"></i></button>
+          <button class="review-scroll-btn" id="reviewNext" aria-label="Next reviews"><i
+              data-lucide="chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Scrollable Reviews -->
+      <div class="reviews-slider" id="reviewsSlider">
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid">
+
+        <!-- Visit Us -->
+        <div class="footer-col reveal">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda Logo" class="footer-logo-img" />
+          </div>
+          <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp;
+            create memories.</p>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New
+                Delhi - 110045</span></li>
+            <li><i data-lucide="phone"></i> <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a></li>
+            <li><i data-lucide="mail"></i> <span data-field="email">hello@gameveda.in</span></li>
+            <li><i data-lucide="clock"></i> <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span></li>
+          </ul>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-col map-col reveal delay-1">
+          <div class="map-box">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Help Links -->
+        <div class="footer-col reveal delay-2">
+          <div class="footer-links-row">
+            <div>
+              <p class="footer-label">HELP</p>
+              <ul class="footer-links">
+                <li><a href="contact.html"><i data-lucide="chevron-right"></i> Contact Us</a></li>
+                <li><a href="faqs.html"><i data-lucide="chevron-right"></i> FAQs</a></li>
+                <li><a href="terms.html"><i data-lucide="chevron-right"></i> Terms &amp; Conditions</a></li>
+                <li><a href="privacy.html"><i data-lucide="chevron-right"></i> Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ready to Play -->
+        <div class="footer-col reveal delay-3">
+          <p class="footer-label"><i data-lucide="zap"></i> READY TO PLAY?</p>
+          <p class="footer-ready-sub">Book your slot now and level up your experience!</p>
+          <div class="footer-cta-btns">
+            <a href="book.html" class="btn-primary footer-cta"><i data-lucide="calendar-check"></i> BOOK YOUR SLOT</a>
+            <a data-field="whatsapp-link" data-msg="Hi, I want to book a slot at Game Veda!"
+              href="https://wa.me/919717689596" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i
+                data-lucide="message-circle"></i> WHATSAPP
+              US</a>
+          </div>
+          <div class="footer-follow">
+            <p class="footer-label">FOLLOW US</p>
+            <div class="social-row">
+              <a data-field="instagram" href="https://www.instagram.com/gamevedacafe/" class="social-btn"
+                target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.056 1.97.24 2.427.403.586.213 1.006.47 1.448.912.442.442.699.862.912 1.448.163.458.347 1.257.403 2.427.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.403 2.427-.213.586-.47 1.006-.912 1.448-.442.442-.862.699-1.448.912-.458.163-1.257.347-2.427.403-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.427-.403-.586-.213-1.006-.47-1.448-.912-.442-.442-.699-.862-.912-1.448-.163-.458-.347-1.257-.403-2.427C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.056-1.17.24-1.97.403-2.427.213-.586.47-1.006.912-1.448.442-.442.862-.699 1.448-.912.458-.163 1.257-.347 2.427-.403C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.735 0 8.332.013 7.052.072 5.77.131 4.676.323 3.757.63 2.772.957 1.99 1.445 1.22 2.216.45 2.986-.038 3.769-.365 4.753c-.307.919-.499 2.013-.558 3.295C-.013 9.667 0 10.07 0 12c0 1.93.013 2.333.072 3.613.059 1.282.251 2.376.558 3.295.327.984.815 1.767 1.586 2.538.771.771 1.553 1.259 2.538 1.586.919.307 2.013.499 3.295.558 1.28.059 1.683.072 3.613.072s2.333-.013 3.613-.072c1.282-.059 2.376-.251 3.295-.558.984-.327 1.767-.815 2.538-1.586.771-.771 1.259-1.553 1.586-2.538.307-.919.499-2.013.558-3.295.059-1.28.072-1.683.072-3.613s-.013-2.333-.072-3.613c-.059-1.282-.251-2.376-.558-3.295C23.05 1.99 22.562 1.208 21.79.437 21.02-.333 20.238-.821 19.254-1.148c-.919-.307-2.013-.499-3.295-.558C14.333-.013 13.93 0 12 0z" />
+                  <path
+                    d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zM18.406 4.594a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/site-data.js" defer></script>
+  <script src="./src/data/reviews.js"></script>
+  <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+
+</html>

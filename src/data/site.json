@@ -1,0 +1,75 @@
+{
+  "brand": {
+    "name": "Game Veda",
+    "tagline": "India's Ultimate Gaming Café",
+    "logo": "/src/images/logo.png",
+    "logoAlt": "Game Veda Logo"
+  },
+  "contact": {
+    "phone": "+91 97176 89596",
+    "phoneRaw": "919717689596",
+    "whatsapp": "919717689596",
+    "email": "hello@gameveda.in",
+    "address": "2nd Floor, RZ 12/2, Puran Nagar Gali, opposite Metro Station-Palam, above Rajmandir HyperMarket, Palam Colony, Raj Nagar I, Raj Nagar, Delhi, 110077",
+    "hours": "Mon - Sun : 11:00 AM - 11:00 PM"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/gamevedacafe/",
+    "facebook": "https://facebook.com/gameveda",
+    "youtube": "https://youtube.com/@gameveda"
+  },
+  "pricing": {
+    "vr": [
+      { "label": "40 Min",  "price": 229, "popular": false, "best": false },
+      { "label": "80 Min",  "price": 449, "popular": true,  "best": false  },
+      { "label": "120 Min", "price": 949, "popular": false, "best": false }
+    ],
+    "playstation": [
+      { "label": "1 Player 1 Hr",  "price": 159, "tag": "Basic",       "popular": false, "best": false },
+      { "label": "2 Players 1 Hr", "price": 299, "tag": "", "popular": true,  "best": false },
+      { "label": "1 Players 3 Hr", "price": 499, "tag": "", "popular": false,  "best": true }
+    ],
+    "8 ball pool": [
+      { "label": "1 hour",       "price": 249, "tag": "Basic",   "popular": false, "best": false },
+      { "label": "Combo",      "price": 449, "tag": "", "popular": true,  "best": false }
+    ]
+  },
+  "membership": [
+    {
+      "id": "mem-silver",
+      "name": "Silver",
+      "price": 1499,
+      "hours": 60,
+      "validity": "30 Days",
+      "dailyPlay": "1 hour every day",
+      "icon": "shield",
+      "tier": "blue",
+      "popular": false,
+      "features": ["Valid for 30 Days", "All Zones Access", "Play 1 hour every day", "Exciting Discounts"]
+    },
+    {
+      "id": "mem-gold",
+      "name": "Gold",
+      "price": 2599,
+      "hours": 120,
+      "validity": "30 Days",
+      "dailyPlay": "2 hours daily",
+      "icon": "shield-check",
+      "tier": "purple",
+      "popular": true,
+      "features": ["Valid for 30 Days", "All Zones Access", "Play 2 hours daily", "Priority Booking", "10% Discount on Food"]
+    },
+    {
+      "id": "mem-platinum",
+      "name": "Platinum",
+      "price": 3299,
+      "hours": 180,
+      "validity": "30 Days",
+      "dailyPlay": "3 hours daily",
+      "icon": "crown",
+      "tier": "gold",
+      "popular": false,
+      "features": ["Valid for 30 Days", "All Zones Access", "Play 3 hours daily", "Priority Booking", "15% Discount on Food", "Exclusive Offers"]
+    }
+  ]
+}

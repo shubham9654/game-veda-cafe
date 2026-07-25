@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Game Veda – India's ultimate gaming cafe in Palam, New Delhi. Reach us by phone, WhatsApp, or email." />
+  <title>Contact Us | Game Veda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <script>if (localStorage.getItem("theme") === "light") document.body.classList.add("light-mode");</script>
+</head>
+<body class="static-page">
+
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo">
+        <img data-field="logo-img" src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <a href="book.html" class="btn-primary nav-cta">Book Now</a>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+      </div>
+    </nav>
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="index.html">Home</a>
+      <a class="mobile-link" href="index.html#zones">Zones</a>
+      <a class="mobile-link" href="index.html#pricing">Pricing</a>
+      <a class="mobile-link" href="index.html#membership">Membership</a>
+      <a class="mobile-link" href="book.html">Book Now</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="static-hero">
+    <span class="page-tag">GET IN TOUCH</span>
+    <h1>Contact Us</h1>
+    <p>Have a question, want to book a slot, or just want to say hi? We'd love to hear from you!</p>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="static-content">
+    <div class="container">
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="static-card">
+          <h2><i data-lucide="map-pin"></i> Get In Touch</h2>
+          <div class="contact-info-item">
+            <i data-lucide="map-pin"></i>
+            <div>
+              <strong>Address</strong>
+              <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="phone"></i>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="mail"></i>
+            <div>
+              <strong>Email</strong>
+              <a data-field="email" href="mailto:hello@gameveda.in">hello@gameveda.in</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <i data-lucide="clock"></i>
+            <div>
+              <strong>Working Hours</strong>
+              <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span>
+            </div>
+          </div>
+          <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+            <a data-field="whatsapp-link" data-msg="Hi Game Veda! I have a question." href="https://wa.me/919717689596" class="btn-whatsapp" style="font-size:.8rem;padding:.6rem 1rem;" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> WhatsApp Us</a>
+          </div>
+        </div>
+
+        <!-- Message Form -->
+        <div class="static-card">
+          <h2><i data-lucide="send"></i> Send Us a Message</h2>
+          <form class="contact-form-wrap" id="contactForm" onsubmit="submitContact(event)">
+            <div class="form-group">
+              <label for="cName">Your Name *</label>
+              <div class="input-wrap"><i data-lucide="user"></i><input type="text" id="cName" class="form-input" placeholder="Enter your name" required /></div>
+            </div>
+            <div class="form-group">
+              <label for="cPhone">WhatsApp Number *</label>
+              <div class="input-wrap"><i data-lucide="phone"></i><input type="tel" id="cPhone" class="form-input" placeholder="e.g. 9876543210" pattern="[6-9][0-9]{9}" maxlength="10" required /></div>
+            </div>
+            <div class="form-group">
+              <label for="cMsg">Message *</label>
+              <div class="input-wrap" style="align-items:flex-start;padding-top:.6rem;">
+                <i data-lucide="message-square" style="margin-top:.1rem;"></i>
+                <textarea id="cMsg" class="form-input" rows="4" placeholder="Write your message here..." required style="resize:vertical;"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn-contact-submit"><i data-lucide="send"></i> Send via WhatsApp</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="static-card" style="margin-top:0;">
+        <h2><i data-lucide="navigation"></i> Find Us on Map</h2>
+        <div class="map-box" style="margin-top:.5rem;">
+          <div class="map-wrapper">
+            <a class="map-open" href="https://maps.app.goo.gl/zpxL4t2zKCbkEdKw8" target="_blank" rel="noopener">Open in Google Maps</a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid book-footer-grid">
+        <div class="footer-col">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda Logo" class="footer-logo-img" />
+          </div>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span></li>
+            <li><i data-lucide="phone"></i> <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a></li>
+            <li><i data-lucide="mail"></i> <span data-field="email">hello@gameveda.in</span></li>
+            <li><i data-lucide="clock"></i> <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span></li>
+          </ul>
+        </div>
+        <div class="footer-col map-col">
+          <div class="map-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved. |
+          <a href="terms.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Terms</a>
+          <a href="privacy.html" style="color:inherit;text-decoration:underline;margin:0 .3rem;">Privacy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/site-data.js" defer></script>
+  <script src="./src/js/main.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () { lucide.createIcons(); });
+    function submitContact(e) {
+      e.preventDefault();
+      const name = document.getElementById('cName').value.trim();
+      const phone = document.getElementById('cPhone').value.trim();
+      const msg = document.getElementById('cMsg').value.trim();
+      const wa = (window.__siteData?.contact?.whatsapp) || '919717689596';
+      const text = `Hi Game Veda!\n\nName: ${name}\nPhone: ${phone}\n\nMessage: ${msg}`;
+      window.open(`https://wa.me/${wa}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
