@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the delicious food and drinks menu at Game Veda - India's ultimate gaming cafe in Palam, New Delhi." />
+  <title>Food Menu | Game Veda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css" />
+  <script>
+    if (localStorage.getItem("theme") === "light") {
+      document.body.classList.add("light-mode");
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Background grid -->
+  <div class="fixed inset-0 hero-grid" style="z-index:-10;pointer-events:none;"></div>
+  <div class="fixed inset-x-0 top-0 hero-glow" style="z-index:-10;pointer-events:none;"></div>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="index.html" class="logo">
+        <img src="/src/images/logo.png" width="60" alt="Game Veda Logo" class="logo-img" />
+        <span class="logo-tagline">PLAY · COMPETE · CHILL</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#zones" class="nav-link">Zones</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="index.html#membership" class="nav-link">Membership</a></li>
+        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+      </ul>
+
+      <div class="nav-right-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <i data-lucide="sun" class="sun-icon"></i>
+          <i data-lucide="moon" class="moon-icon"></i>
+        </button>
+        <button id="menuBtn" class="hamburger" aria-label="Open menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu hidden">
+      <a class="mobile-link" href="index.html">Home</a>
+      <a class="mobile-link" href="index.html#zones">Zones</a>
+      <a class="mobile-link" href="menu.html">Menu</a>
+      <a class="mobile-link" href="index.html#pricing">Pricing</a>
+      <a class="mobile-link" href="index.html#membership">Membership</a>
+      <a class="mobile-link" href="index.html#gallery">Gallery</a>
+    </div>
+  </header>
+
+    <!-- ==================== GAME VEDA CAFE MENU ==================== -->
+  <section id="menu" class="section menu-section">
+    <div class="container">
+      <h2 class="section-title reveal"><span class="dash"></span> FOOD MENU <span class="dash"></span></h2>
+
+      <div class="menu-poster-grid">
+
+        <!-- ROW 1: MOMOS (left) + NOODLES (right) -->
+
+        <!-- MOMOS — Title top-left, image top-right overflowing, table full-width below -->
+        <article class="menu-card mc-momos reveal" data-category="momos">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--orange">MOMOS</h3>
+            <img src="./src/images/menu/momos.png" alt="Momos" class="mc-img mc-img--momos" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="3" class="th-group-half">HALF (6 PCS)</th>
+                  <th colspan="3" class="th-group-full">FULL (10 PCS)</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Steam Momos</td><td><span class="price-num">119</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td></tr>
+                <tr><td class="td-item">Fried Momos</td><td><span class="price-num">129</span></td><td><span class="price-num">159</span></td><td><span class="price-num">189</span></td><td><span class="price-num">149</span></td><td><span class="price-num">179</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Kurkure Momos</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Gravy Momos</td><td><span class="price-num">159</span></td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td></tr>
+                <tr><td class="td-item">Chilly Momos</td><td><span class="price-num">159</span></td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td></tr>
+                <tr><td class="td-item">Tangy Hot &amp; Spicy Momos</td><td><span class="price-num">169</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">239</span></td><td><span class="price-num">249</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- NOODLES — Title top-left, image top-right, table below -->
+        <article class="menu-card mc-noodles reveal delay-1" data-category="noodles">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--cyan">NOODLES</h3>
+            <img src="./src/images/menu/noodles.png" alt="Noodles" class="mc-img mc-img--noodles" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="4" class="th-group-half">HALF</th>
+                  <th colspan="4" class="th-group-full">FULL</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Hakka Noodle</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Shezwan Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Singapori Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Chilly Garlic Noodles</td><td><span class="price-num">179</span></td><td><span class="price-num">189</span></td><td><span class="price-num">189</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">219</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- ROW 2: FRIED RICE (left) + right column with SPRING ROLL stacked on CHILLY PATATO -->
+
+        <!-- FRIED RICE -->
+        <article class="menu-card mc-fried-rice reveal delay-2" data-category="fried-rice">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--green">FRIED RICE</h3>
+            <img src="./src/images/menu/fried_rice.png" alt="Fried Rice" class="mc-img mc-img--fried-rice" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table wide-table">
+              <thead>
+                <tr>
+                  <th rowspan="2" class="th-item">ITEMS</th>
+                  <th colspan="4" class="th-group-half">HALF</th>
+                  <th colspan="4" class="th-group-full">FULL</th>
+                </tr>
+                <tr>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                  <th>VEG</th><th>EGG</th><th>PANEER</th><th>CHICKEN</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Regular Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">179</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Shezwan Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">179</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">249</span></td></tr>
+                <tr><td class="td-item">Singapori Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">259</span></td></tr>
+                <tr><td class="td-item">Chilly Fried Rice</td><td><span class="price-num">149</span></td><td><span class="price-num">159</span></td><td><span class="price-num">179</span></td><td><span class="price-num">199</span></td><td><span class="price-num">199</span></td><td><span class="price-num">229</span></td><td><span class="price-num">229</span></td><td><span class="price-num">259</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- RIGHT COLUMN: Spring Roll on top, Chilly Patato below -->
+        <div class="mc-right-stack">
+
+          <!-- SPRING ROLL -->
+          <article class="menu-card mc-spring-roll reveal delay-3" data-category="spring-roll">
+            <div class="mc-head">
+              <h3 class="mc-title mc-title--pink">SPRING ROLL</h3>
+              <img src="./src/images/menu/spring_rolls.png" alt="Spring Rolls" class="mc-img mc-img--spring-roll" />
+            </div>
+            <div class="menu-table-wrapper">
+              <table class="menu-table">
+                <thead>
+                  <tr>
+                    <th class="th-item">ITEMS</th>
+                    <th class="th-group-half">HALF (4 PCS)</th>
+                    <th class="th-group-full">FULL (8 PCS)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="td-item">Krunchy Spring Roll</td><td><span class="price-num">119</span></td><td><span class="price-num">159</span></td></tr>
+                  <tr><td class="td-item">Veg Spring Roll</td><td><span class="price-num">99</span></td><td><span class="price-num">149</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <!-- CHILLY PATATO -->
+          <article class="menu-card mc-chilly-potato reveal delay-4" data-category="chilly-potato">
+            <div class="mc-head">
+              <h3 class="mc-title mc-title--purple">CHILLY PATATO</h3>
+              <img src="./src/images/menu/chilly_potato.png" alt="Chilly Potato" class="mc-img mc-img--chilly-potato" />
+            </div>
+            <div class="menu-table-wrapper">
+              <table class="menu-table">
+                <thead>
+                  <tr>
+                    <th class="th-item">ITEMS</th>
+                    <th class="th-group-half">HALF</th>
+                    <th class="th-group-full">FULL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td class="td-item">Chilly Patato</td><td><span class="price-num">139</span></td><td><span class="price-num">179</span></td></tr>
+                  <tr><td class="td-item">Honey Chilly Patato</td><td><span class="price-num">179</span></td><td><span class="price-num">239</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+        </div><!-- end mc-right-stack -->
+
+        <!-- ROW 3: QUICK BITES (left) + FRENCH FRIES (right) -->
+
+        <!-- QUICK BITES — image on left side, title+table on right -->
+        <!-- QUICK BITES -->
+        <article class="menu-card mc-quick-bites reveal delay-5" data-category="quick-bites">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--yellow">QUICK BITES</h3>
+            <img src="./src/images/menu/quick_bites.png" alt="Quick Bites" class="mc-img mc-img--quick-bites" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th class="th-item">ITEMS</th>
+                  <th class="th-group-half">HALF</th>
+                  <th class="th-group-full">FULL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Veg Manchurian</td><td><span class="price-num">159</span></td><td><span class="price-num">219</span></td></tr>
+                <tr><td class="td-item">Chilly Chicken</td><td><span class="price-num">179</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Lemon Chicken</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Chicken Manchurian</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Chilly Panner</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+                <tr><td class="td-item">Paneer Manchurian</td><td><span class="price-num">199</span></td><td><span class="price-num">299</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- FRENCH FRIES — title top, image right, table left -->
+        <!-- FRENCH FRIES -->
+        <article class="menu-card mc-french-fries reveal delay-1" data-category="french-fries">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--orange-bright">FRENCH FRIES</h3>
+            <img src="./src/images/menu/french_fries.png" alt="French Fries" class="mc-img mc-img--french-fries" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <thead>
+                <tr>
+                  <th class="th-item">ITEMS</th>
+                  <th class="th-group-full">FULL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-item">Regular Salted Fries</td><td><span class="price-num">139</span></td></tr>
+                <tr><td class="td-item">Peri Peri Fries 🌶️🌶️</td><td><span class="price-num">159</span></td></tr>
+              </tbody>
+            </table>
+            <div class="mc-addon-dip">
+              <span class="mc-addon-label">ADD ON DIP <span class="mc-addon-price">₹20</span></span>
+              <span class="mc-addon-items">Mayo | Schezwan | Cheese</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROW 4: OTHER ITEMS (left) + INFO PANEL (right) -->
+
+        <!-- OTHER ITEMS -->
+        <!-- OTHER ITEMS -->
+        <article class="menu-card mc-other-items reveal delay-2" data-category="fitness">
+          <div class="mc-head">
+            <h3 class="mc-title mc-title--blue">OTHER ITEMS <span class="mc-onmrp-badge">ON MRP</span></h3>
+            <img src="./src/images/menu/fitness_drinks.png" alt="Pre Workout" class="mc-img mc-img--fitness" />
+          </div>
+          <div class="menu-table-wrapper">
+            <table class="menu-table">
+              <tbody>
+                <tr><td class="td-item">Protein Shake</td><td><span class="price-num">169</span></td></tr>
+                <tr><td class="td-item">Preworkout</td><td><span class="price-num">79</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <!-- INFO PANEL -->
+        <div class="mc-info-panel reveal delay-3">
+          <div class="mc-info-item">
+            <i data-lucide="thumbs-up" class="mc-info-icon mc-info-icon--blue"></i>
+            <span>ALL PRICES ARE INCLUSIVE OF TAXES</span>
+          </div>
+          <div class="mc-info-item hide-on-mobile">
+            <i data-lucide="leaf" class="mc-info-icon mc-info-icon--green"></i>
+            <span>FRESH INGREDIENTS. GREAT TASTE.</span>
+          </div>
+          <div class="mc-info-item hide-on-mobile">
+            <i data-lucide="heart" class="mc-info-icon mc-info-icon--red"></i>
+            <span>THANK YOU FOR SUPPORTING <span class="gradient-text">GAME VEDA</span>!</span>
+          </div>
+        </div>
+
+      </div><!-- end menu-poster-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container footer-grid book-footer-grid">
+
+        <!-- Visit Us -->
+        <div class="footer-col">
+          <p class="footer-label"><i data-lucide="map-pin"></i> VISIT US</p>
+          <div class="footer-logo-wrap">
+            <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda Logo" class="footer-logo-img" />
+          </div>
+          <p class="footer-sub">Game Veda is a premium gaming café where fun meets competition. Play, compete &amp; create memories.</p>
+          <ul class="footer-contact-list">
+            <li><i data-lucide="map-pin"></i> <span data-field="address">Floor R2-123, Puram Nagar, Palam Colony, New Delhi - 110045</span></li>
+            <li><i data-lucide="phone"></i> <a data-field="phone-link" href="tel:919717689596">+91 97176 89596</a></li>
+            <li><i data-lucide="mail"></i> <span data-field="email">hello@gameveda.in</span></li>
+            <li><i data-lucide="clock"></i> <span data-field="hours">Mon - Sun : 11:00 AM - 11:00 PM</span></li>
+          </ul>
+        </div>
+
+        <!-- Map -->
+        <div class="footer-col map-col">
+          <div class="map-box">
+            <div class="map-wrapper">
+              <a class="map-open" href="https://maps.app.goo.gl/zpxL4t2zKCbkEdKw8" target="_blank" rel="noopener">Open in Google Maps</a>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.402314479752!2d77.08094287549918!3d28.58770517568932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b48e8a82d65%3A0xc505e95a8b8fdbb1!2sGAME%20VEDA!5e0!3m2!1sen!2sin!4v1779995516989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- Footer bottom bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bar">
+        <div class="footer-brand-mini">
+          <img data-field="logo-img" src="/src/images/logo.png" alt="Game Veda" class="footer-mini-logo" />
+          <div>GAME <span>VEDA</span></div>
+        </div>
+        <p>© <span id="year"></span> <span data-field="brand-name">Game Veda</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./src/js/site-data.js" defer></script>
+  <script src="./src/js/main.js" defer></script>
+  <script src="./src/js/book.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
